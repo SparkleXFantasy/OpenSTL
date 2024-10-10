@@ -200,7 +200,7 @@ def metric(pred, true, mean=None, std=None, metrics=['mae', 'mse'],
         c_width = pred.shape[2] // c_group
     else:
         channel_names, c_group, c_width = None, None, None
-
+    print(f'Metrics:{metrics}')
     if 'mse' in metrics:
         if channel_names is None:
             eval_res['mse'] = MSE(pred, true, spatial_norm)
@@ -246,8 +246,10 @@ def metric(pred, true, mean=None, std=None, metrics=['mae', 'mse'],
         ssim = 0
         for b in range(pred.shape[0]):
             for f in range(pred.shape[1]):
-                ssim += cal_ssim(pred[b, f].swapaxes(0, 2),
-                                 true[b, f].swapaxes(0, 2), multichannel=True)
+                img_norm = pred[b, f].swapaxes(0, 2)
+                data_range = img_norm.max() - img_norm.min()
+                ssim += cal_ssim(img_norm,
+                                 true[b, f].swapaxes(0, 2), multichannel=True, win_size=3, data_range=data_range)
         eval_res['ssim'] = ssim / (pred.shape[0] * pred.shape[1])
 
     if 'psnr' in metrics:

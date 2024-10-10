@@ -2,7 +2,7 @@
 
 from .config_utils import Config
 from .main_utils import (print_log, output_namespace, collect_env, check_dir, 
-                        get_dataset, measure_throughput, load_config, update_config, get_dist_info)
+                        get_dataset, get_concat_dataset, measure_throughput, load_config, update_config, get_dist_info)
 from .parser import create_parser, default_parser
 from .predrnn_utils import (reserve_schedule_sampling_exp, schedule_sampling, reshape_patch,
                         reshape_patch_back)
@@ -17,7 +17,7 @@ from .mmvp_utils import build_similarity_matrix, sim_matrix_postprocess, sim_mat
 __all__ = [
     'Config', 'create_parser', 'default_parser',
     'print_log', 'output_namespace', 'collect_env', 'check_dir',
-    'get_dataset', 'measure_throughput', 'load_config', 'update_config',
+    'get_dataset', 'get_concat_dataset', 'measure_throughput', 'load_config', 'update_config',
     'get_dist_info',
     'reserve_schedule_sampling_exp', 'schedule_sampling', 'reshape_patch', 'reshape_patch_back',
     'get_initial_states',

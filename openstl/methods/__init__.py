@@ -8,7 +8,7 @@ from .phydnet import PhyDNet
 from .predrnn import PredRNN
 from .predrnnpp import PredRNNpp
 from .predrnnv2 import PredRNNv2
-from .simvp import SimVP
+from .simvp import SimVP, MultiSimVP
 from .tau import TAU
 from .mmvp import MMVP
 from .swinlstm import SwinLSTM_D, SwinLSTM_B
@@ -30,6 +30,9 @@ method_maps = {
     'swinlstm_b': SwinLSTM_B,
     'swinlstm': SwinLSTM_B,
     'wast': WaST
+}
+multi_method_maps = {
+    "simvp": MultiSimVP    
 }
 
 __all__ = [

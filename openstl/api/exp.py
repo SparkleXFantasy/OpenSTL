@@ -7,9 +7,9 @@ from fvcore.nn import FlopCountAnalysis, flop_count_table
 
 import torch
 
-from openstl.methods import method_maps
+from openstl.methods import method_maps, multi_method_maps
 from openstl.datasets import BaseDataModule
-from openstl.utils import (get_dataset, measure_throughput, SetupCallback, EpochEndCallback, BestCheckpointCallback)
+from openstl.utils import (get_dataset, get_concat_dataset, measure_throughput, load_config, update_config, SetupCallback, EpochEndCallback, BestCheckpointCallback)
 
 from lightning import seed_everything, Trainer
 import lightning.pytorch.callbacks as lc
@@ -25,7 +25,6 @@ class BaseExperiment(object):
         self.method = None
         self.args.method = self.args.method.lower()
         self._dist = self.args.dist
-
         base_dir = args.res_dir if args.res_dir is not None else 'work_dirs'
         save_dir = osp.join(base_dir, args.ex_name if not args.ex_name.startswith(args.res_dir) \
             else args.ex_name.split(args.res_dir+'/')[-1])
@@ -33,15 +32,30 @@ class BaseExperiment(object):
 
         seed_everything(args.seed)
         self.data = self._get_data(dataloaders)
-        self.method = method_maps[self.args.method](steps_per_epoch=len(self.data.train_loader), \
-            test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
+        if self.args.configs != []:    # multi encoder decoders
+            enc_dec_configs = []
+            for c in self.args.configs:
+                config = dict()
+                cfg_path = osp.join('./configs_multi', c)
+                config = update_config(config, load_config(cfg_path))
+                enc_dec_config = {}
+                for k in ['spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T', 'N_T', 'N_S']:
+                    if k in config:
+                        enc_dec_config[k] = config[k]
+                enc_dec_configs.append(enc_dec_config)
+            self.method = multi_method_maps[self.args.method](enc_dec_configs, steps_per_epoch=len(self.data.train_loader), \
+                test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
+        else:
+            self.method = method_maps[self.args.method](steps_per_epoch=len(self.data.train_loader), \
+                test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
         callbacks, self.save_dir = self._load_callbacks(args, save_dir, ckpt_dir)
         self.trainer = self._init_trainer(self.args, callbacks, strategy)
 
     def _init_trainer(self, args, callbacks, strategy):
         return Trainer(devices=args.gpus,  # Use these GPUs
                        max_epochs=args.epoch,  # Maximum number of epochs to train for
-                       strategy=strategy,   # 'ddp', 'deepspeed_stage_2', 'ddp_find_unused_parameters_false'
+                    #    strategy=strategy,   # 'ddp', 'deepspeed_stage_2', 'ddp_find_unused_parameters_false'
+                       strategy='ddp',   # 'ddp', 'deepspeed_stage_2', 'ddp_find_unused_parameters_false'
                        accelerator='gpu',  # Use distributed data parallel
                        callbacks=callbacks
                     )
@@ -78,15 +92,18 @@ class BaseExperiment(object):
         if args.sched:
             callbacks.append(lc.LearningRateMonitor(logging_interval=None))
         return callbacks, save_dir
-
+        
     def _get_data(self, dataloaders=None):
         """Prepare datasets and dataloaders"""
         if dataloaders is None:
-            train_loader, vali_loader, test_loader = \
-                get_dataset(self.args.dataname, self.config)
+            if len(self.args.datanames) != 0:
+                train_loader, vali_loader, test_loader = \
+                get_concat_dataset(self.args.datanames, self.config)
+            else:
+                train_loader, vali_loader, test_loader = \
+                    get_dataset(self.args.dataname, self.config)
         else:
             train_loader, vali_loader, test_loader = dataloaders
-
         vali_loader = test_loader if vali_loader is None else vali_loader
         return BaseDataModule(train_loader, vali_loader, test_loader)
 
@@ -96,7 +113,9 @@ class BaseExperiment(object):
     def test(self):
         if self.args.test == True:
             ckpt = torch.load(osp.join(self.save_dir, 'checkpoints', 'best.ckpt'))
-            self.method.load_state_dict(ckpt['state_dict'])
+            missing_keys, unexpected_keys = self.method.load_state_dict(ckpt['state_dict'], strict=True)
+            print(f'Missing keys: {missing_keys}')
+            print(f'Unexpected keys: {unexpected_keys}')
         self.trainer.test(self.method, self.data)
     
     def display_method_info(self, args):

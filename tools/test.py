@@ -19,7 +19,6 @@ if __name__ == '__main__':
     for attribute in default_values.keys():
         if config[attribute] is None:
             config[attribute] = default_values[attribute]
-
     print('>'*35 + ' testing  ' + '<'*35)
     exp = BaseExperiment(args)
     rank, _ = get_dist_info()

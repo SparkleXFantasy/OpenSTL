@@ -86,6 +86,14 @@ def get_dataset(dataname, config):
     return load_data(**config)
 
 
+def get_concat_dataset(datanames, config):
+    from openstl.datasets import dataset_parameters
+    from openstl.datasets import load_concat_data
+    for dataname in datanames:
+        config.update(dataset_parameters[dataname])
+    return load_concat_data(**config)
+
+
 def measure_throughput(model, input_dummy):
 
     def get_batch_size(H, W):
