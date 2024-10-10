@@ -248,14 +248,23 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
                            test_input_handle.indices,
                            img_height,
                            pre_seq_length, aft_seq_length, use_augment=False)
-
+    
+    from .utils import random_split_dataset
+    # partial
+    train_set, val_set, dropped = random_split_dataset(dataset=train_set, split_ratio=[0.8, 0.2, 14], seed=42)
     dataloader_train = create_loader(train_set,
                                      batch_size=batch_size,
                                      shuffle=True, is_training=True,
                                      pin_memory=True, drop_last=True,
                                      num_workers=num_workers,
                                      distributed=distributed, use_prefetcher=use_prefetcher)
-    dataloader_vali = None
+    # dataloader_vali = None
+    dataloader_vali = create_loader(val_set,
+                                     batch_size=batch_size,
+                                     shuffle=True, is_training=True,
+                                     pin_memory=True, drop_last=True,
+                                     num_workers=num_workers,
+                                     distributed=distributed, use_prefetcher=use_prefetcher)
     dataloader_test = create_loader(test_set,
                                     batch_size=val_batch_size,
                                     shuffle=False, is_training=False,
@@ -264,6 +273,40 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
                                     distributed=distributed, use_prefetcher=use_prefetcher)
 
     return dataloader_train, dataloader_vali, dataloader_test
+
+
+def load_dataset(batch_size, val_batch_size, data_root, num_workers=4,
+              pre_seq_length=2, aft_seq_length=12, in_shape=[2, 3, 64, 64],
+              distributed=False, use_augment=False, use_prefetcher=False, drop_last=False):
+
+    img_height = in_shape[-2] if in_shape is not None else 64
+    img_width = in_shape[-1] if in_shape is not None else 64
+    input_param = {
+        'data_path': os.path.join(data_root, 'softmotion30_44k'),
+        'image_height': img_height,
+        'image_width': img_width,
+        'minibatch_size': batch_size,
+        'seq_length': (pre_seq_length + aft_seq_length),
+        'input_data_type': 'float32',
+        'name': 'bair'
+    }
+    input_handle = DataProcess(input_param)
+    train_input_handle = input_handle.get_train_input_handle()
+    test_input_handle = input_handle.get_test_input_handle()
+
+    train_set = BAIRDataset(train_input_handle.datas,
+                            train_input_handle.indices,
+                            img_height,
+                            pre_seq_length, aft_seq_length, use_augment=use_augment)
+    test_set = BAIRDataset(test_input_handle.datas,
+                           test_input_handle.indices,
+                           img_height,
+                           pre_seq_length, aft_seq_length, use_augment=False)
+    
+    from .utils import random_split_dataset
+    # partial
+    train_set, val_set, dropped = random_split_dataset(dataset=train_set, split_ratio=[0.8, 0.2, 14], seed=42)
+    return train_set, val_set, test_set
 
 
 if __name__ == '__main__':

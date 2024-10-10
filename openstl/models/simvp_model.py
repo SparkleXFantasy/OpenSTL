@@ -5,7 +5,6 @@ from openstl.modules import (ConvSC, ConvNeXtSubBlock, ConvMixerSubBlock, GASubB
                              HorNetSubBlock, MLPMixerSubBlock, MogaSubBlock, PoolFormerSubBlock,
                              SwinSubBlock, UniformerSubBlock, VANSubBlock, ViTSubBlock, TAUSubBlock)
 
-
 class SimVP_Model(nn.Module):
     r"""SimVP Model
 
@@ -48,6 +47,65 @@ class SimVP_Model(nn.Module):
         return Y
 
 
+class Multi_SimVP_Model(nn.Module):
+    r"""SimVP Model
+
+    Implementation of `SimVP: Simpler yet Better Video Prediction
+    <https://arxiv.org/abs/2206.05099>`_.
+
+    """
+    def __init__(self, enc_dec_configs, model_type='gSTA', mlp_ratio=8., drop=0.0, drop_path=0.0, **kwargs):
+        super(Multi_SimVP_Model, self).__init__()
+        encs_params = []
+        decs_params = []
+        backbone_params = {
+            'hid_S': enc_dec_configs[0]['hid_S'],
+            'hid_T': enc_dec_configs[0]['hid_T'],
+            'N_T': enc_dec_configs[0]['N_T']
+        }
+        for config in enc_dec_configs[1:]:
+            for k in ['hid_S', 'hid_T', 'N_T']:
+                try:
+                    assert config[k] == backbone_params[k]
+                except:
+                    raise ValueError(f'Expected the same backbone parameters. Get {backbone_params[k]} and {config[k]} on {k}.')
+        for config in enc_dec_configs:
+            T, C, H, W = config['in_shape']    # T is pre_seq_length
+            H, W = int(H / 2**(config['N_S']/2)), int(W / 2**(config['N_S']/2))  # downsample 1 / 2**(N_S/2)
+            act_inplace = False
+            encs_params.append({'C_in': C, 'C_hid': config['hid_S'], 'N_S': config['N_S'], 'spatio_kernel': config['spatio_kernel_enc'], 'act_inplace': act_inplace})
+            decs_params.append({'C_hid': config['hid_S'], 'C_out': C, 'N_S': config['N_S'], 'spatio_kernel': config['spatio_kernel_enc'], 'act_inplace': act_inplace})
+        # T, C, H, W = in_shape  # T is pre_seq_length
+        # H, W = int(H / 2**(N_S/2)), int(W / 2**(N_S/2))  # downsample 1 / 2**(N_S/2)
+        # self.enc = Encoder(C, hid_S, N_S, spatio_kernel_enc, act_inplace=act_inplace)
+        # self.dec = Decoder(hid_S, C, N_S, spatio_kernel_dec, act_inplace=act_inplace)
+        self.encs = nn.ModuleList([Encoder(**params) for params in encs_params])
+        self.decs = nn.ModuleList([Decoder(**params) for params in decs_params])
+        model_type = 'gsta' if model_type is None else model_type.lower()
+        if model_type == 'incepu':
+            self.hid = MidIncepNet(T*backbone_params['hid_S'], backbone_params['hid_T'], backbone_params['N_T'])
+        else:
+            self.hid = MidMetaNet(T*backbone_params['hid_S'], backbone_params['hid_T'], backbone_params['N_T'],
+                input_resolution=None, model_type=model_type,
+                mlp_ratio=mlp_ratio, drop=drop, drop_path=drop_path)
+
+    def forward(self, x_raw, data_cls_idx, **kwargs):
+        B, T, C, H, W = x_raw.shape
+        x = x_raw.view(B*T, C, H, W)
+        enc = self.encs[data_cls_idx]
+        embed, skip = enc(x)
+        _, C_, H_, W_ = embed.shape
+
+        z = embed.view(B, T, C_, H_, W_)
+        hid = self.hid(z)
+        hid = hid.reshape(B*T, C_, H_, W_)
+        
+        dec = self.decs[data_cls_idx]
+        Y = dec(hid, skip)
+        Y = Y.reshape(B, T, C, H, W)
+        return Y
+    
+    
 def sampling_generator(N, reverse=False):
     samplings = [False, True] * (N // 2)
     if reverse: return list(reversed(samplings[:N]))

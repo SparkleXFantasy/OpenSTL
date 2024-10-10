@@ -266,3 +266,13 @@ def reshape_patch_back_tensor(patch_tensor, patch_size):
                                    patch_width * patch_size,
                                    img_channels])
     return img_tensor.permute(0, 1, 4, 2, 3)
+
+
+def random_split_dataset(dataset, split_ratio, seed=42):
+    from torch.utils.data import random_split
+    total_ratio = sum(split_ratio)
+    split_ratio = [x / total_ratio for x in split_ratio]
+    dataset_len = len(dataset)
+    dataset_split_len = [int(x * dataset_len) for x in split_ratio]
+    dataset_split_len[-1] = int(dataset_len - sum(dataset_split_len) + dataset_split_len[-1])
+    return random_split(dataset=dataset, lengths=dataset_split_len, generator=torch.Generator().manual_seed(seed))

@@ -29,7 +29,7 @@ def create_parser():
     parser.add_argument('--val_batch_size', '-vb', default=16, type=int, help='Validation batch size')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--data_root', default='./data')
-    parser.add_argument('--dataname', '-d', default=None, type=str,
+    parser.add_argument('--dataname', '-d', default='mmnist', type=str,
                         choices=['bair', 'mfmnist', 'mmnist', 'mmnist_cifar', 'noisymmnist', 'taxibj', 'human',
                                 'kth', 'kth20', 'kth40', 'kitticaltech', 'kinetics', 'kinetics400', 'kinetics600',
                                 'weather', 'weather_t2m_5_625', 'weather_mv_4_28_s6_5_625', 'weather_mv_4_4_s6_5_625',
@@ -37,7 +37,9 @@ def create_parser():
                                 'weather_r_1_40625', 'weather_uv10_1_40625', 'weather_tcc_1_40625',
                                 'sevir_vis', 'sevir_ir069', 'sevir_ir107', 'sevir_vil'],
                         help='Dataset name (default: "mmnist")')
-    parser.add_argument('--datanames', default=[], nargs='*', type=str, help='Concat Dataset name')
+    parser.add_argument('--datanames', default=[], nargs='*', type=str,
+                    help='Concat Dataset name')
+    parser.add_argument('--configs', default=[], nargs='*', type=str, help='configs for each method')
     parser.add_argument('--pre_seq_length', default=None, type=int, help='Sequence length before prediction')
     parser.add_argument('--aft_seq_length', default=None, type=int, help='Sequence length after prediction')
     parser.add_argument('--total_length', default=None, type=int, help='Total Sequence length for prediction')

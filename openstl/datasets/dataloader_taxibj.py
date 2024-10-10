@@ -73,6 +73,20 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
     return dataloader_train, dataloader_vali, dataloader_test
 
 
+def load_dataset(batch_size, val_batch_size, data_root, num_workers=4,
+              pre_seq_length=None, aft_seq_length=None, in_shape=None,
+              distributed=False, use_augment=False, use_prefetcher=False, drop_last=False):
+
+    dataset = np.load(os.path.join(data_root, 'taxibj/dataset.npz'))
+    X_train, Y_train, X_test, Y_test = dataset['X_train'], dataset[
+        'Y_train'], dataset['X_test'], dataset['Y_test']
+    assert X_train.shape[1] == pre_seq_length and Y_train.shape[1] == aft_seq_length
+    train_set = TaxibjDataset(X=X_train, Y=Y_train, use_augment=use_augment)
+    test_set = TaxibjDataset(X=X_test, Y=Y_test, use_augment=False)
+
+    return train_set, test_set, test_set
+
+
 if __name__ == '__main__':
     dataloader_train, _, dataloader_test = \
         load_data(batch_size=16,
