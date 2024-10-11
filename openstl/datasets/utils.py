@@ -6,6 +6,9 @@ from timm.data.distributed_sampler import OrderedDistributedSampler, RepeatAugSa
 
 import torch.utils.data
 import numpy as np
+import math
+import torch
+from torch.utils.data.sampler import RandomSampler
 
 
 def worker_init(worker_id, worker_seeding='all'):
@@ -146,6 +149,7 @@ class PrefetchLoader:
 def create_loader(dataset,
                   batch_size,
                   shuffle=True,
+                  sampler=None,
                   is_training=False,
                   mean=None,
                   std=None,
@@ -160,19 +164,19 @@ def create_loader(dataset,
                   collate_fn=None,
                   persistent_workers=True,
                   worker_seeding='all'):
-    sampler = None
-    if distributed and not isinstance(dataset, torch.utils.data.IterableDataset):
-        if is_training:
-            if num_aug_repeats:
-                sampler = RepeatAugSampler(dataset, num_repeats=num_aug_repeats)
+    if sampler is None:
+        if distributed and not isinstance(dataset, torch.utils.data.IterableDataset):
+            if is_training:
+                if num_aug_repeats:
+                    sampler = RepeatAugSampler(dataset, num_repeats=num_aug_repeats)
+                else:
+                    sampler = torch.utils.data.distributed.DistributedSampler(dataset)
             else:
-                sampler = torch.utils.data.distributed.DistributedSampler(dataset)
-        else:
-            # This will add extra duplicate entries to result in equal num
-            # of samples per-process, will slightly alter validation results
-            sampler = OrderedDistributedSampler(dataset)
-    else:
-        assert num_aug_repeats==0, "RepeatAugment is not supported in non-distributed or IterableDataset"
+                # This will add extra duplicate entries to result in equal num
+                # of samples per-process, will slightly alter validation results
+                sampler = OrderedDistributedSampler(dataset)
+    # else:
+    #     assert num_aug_repeats==0, "RepeatAugment is not supported in non-distributed or IterableDataset"
 
     if collate_fn is None:
         collate_fn = torch.utils.data.dataloader.default_collate
@@ -276,3 +280,78 @@ def random_split_dataset(dataset, split_ratio, seed=42):
     dataset_split_len = [int(x * dataset_len) for x in split_ratio]
     dataset_split_len[-1] = int(dataset_len - sum(dataset_split_len) + dataset_split_len[-1])
     return random_split(dataset=dataset, lengths=dataset_split_len, generator=torch.Generator().manual_seed(seed))
+
+
+class BatchSchedulerSampler(torch.utils.data.sampler.Sampler):
+    """
+    iterate over tasks and provide a random batch per task in each mini-batch
+    """
+    def __init__(self, dataset, batch_size, rank, gpus, shuffle=False, epoch=0):
+        self.dataset = dataset
+        self.batch_size = batch_size
+        self.number_of_datasets = len(dataset.datasets)
+        self.largest_dataset_size = max([len(cur_dataset) for cur_dataset in dataset.datasets])
+
+        self.number_selected_samples = int(self.batch_size * math.ceil(self.largest_dataset_size / self.batch_size) * len(self.dataset.datasets) / gpus)
+        self.number_of_total_size = self.number_selected_samples*gpus
+        print('number_selected_samples', self.number_selected_samples)
+        print('total sample epoch', self.number_of_datasets * self.largest_dataset_size)
+        self.gpus = gpus
+        self.rank = rank
+        self.shuffle = shuffle
+        self.epoch = epoch
+
+    def __len__(self):
+        return self.number_selected_samples
+
+    def __iter__(self):
+        if self.shuffle:
+            # deterministically shuffle based on epoch
+            g = torch.Generator()
+            g.manual_seed(self.epoch)
+            # indices = torch.randperm(len(self.dataset), generator=g)
+        else:
+            g = torch.Generator()
+            g.manual_seed(0)
+
+        samplers_list = []
+        sampler_iterators = []
+        for dataset_idx in range(self.number_of_datasets):
+            cur_dataset = self.dataset.datasets[dataset_idx]
+            sampler = RandomSampler(cur_dataset, generator=g)
+            samplers_list.append(sampler)
+            cur_sampler_iterator = iter(list(sampler.__iter__())[self.rank:self.number_selected_samples:self.gpus])
+            sampler_iterators.append(cur_sampler_iterator)
+
+        push_index_val = [0] + self.dataset.cumulative_sizes[:-1]
+        step = self.batch_size * self.number_of_datasets
+        samples_to_grab = self.batch_size
+        
+        # for this case we want to get all samples in dataset, this force us to resample from the smaller datasets
+        epoch_samples = self.largest_dataset_size * self.number_of_datasets
+
+        final_samples_list = []  # this is a list of indexes from the combined dataset
+        for _ in range(0, epoch_samples, step):
+            for i in range(self.number_of_datasets):
+                cur_batch_sampler = sampler_iterators[i]
+                cur_samples = []
+                for _ in range(samples_to_grab):
+                    try:
+                        cur_sample_org = cur_batch_sampler.__next__()
+                        cur_sample = cur_sample_org + push_index_val[i]
+                        cur_samples.append(cur_sample)
+                    except StopIteration:
+                        # got to the end of iterator - restart the iterator and continue to get samples
+                        # until reaching "epoch_samples"
+                        sampler_iterators[i] = iter(list(samplers_list[i].__iter__())[self.rank:self.number_of_total_size:self.gpus])
+                        cur_batch_sampler = sampler_iterators[i]
+                        cur_sample_org = cur_batch_sampler.__next__()
+                        cur_sample = cur_sample_org + push_index_val[i]
+                        cur_samples.append(cur_sample)
+                final_samples_list.extend(cur_samples)
+        
+        return iter(final_samples_list[:self.number_selected_samples])
+    
+    def set_epoch(self, epoch):
+        self.epoch = epoch
+    

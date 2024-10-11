@@ -39,7 +39,7 @@ class BaseExperiment(object):
                 cfg_path = osp.join('./configs_multi', c)
                 config = update_config(config, load_config(cfg_path))
                 enc_dec_config = {}
-                for k in ['spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T', 'N_T', 'N_S']:
+                for k in ['spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T', 'N_T', 'N_S', 'in_shape', 'pre_seq_length', 'aft_seq_length', 'total_length']:
                     if k in config:
                         enc_dec_config[k] = config[k]
                 enc_dec_configs.append(enc_dec_config)

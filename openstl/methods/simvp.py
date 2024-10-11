@@ -64,6 +64,7 @@ class MultiSimVP(Base_multi_method):
         return Multi_SimVP_Model(enc_dec_configs, **kwargs)
     
     def forward(self, batch_x, data_cls_idx, batch_y=None, **kwargs):
+        data_cls_idx = data_cls_idx[0].item()    # data_cls_idx remains the same for one batch.
         pre_seq_length, aft_seq_length = self.hparams.enc_dec_configs[data_cls_idx]['pre_seq_length'], self.hparams.enc_dec_configs[data_cls_idx]['aft_seq_length']
         if aft_seq_length == pre_seq_length:
             pred_y = self.model(batch_x, data_cls_idx)
