@@ -35,8 +35,14 @@ class SetupCallback(Callback):
                 filemode='a', format='%(asctime)s - %(message)s')
             # print env info
             print_log('Environment info:\n' + dash_line + env_info + '\n' + dash_line)
+
+            if 'configs' in self.config:
+                # 避免循环引用，删除 configs 字段
+                del self.config['configs']
+
             sv_param = osp.join(self.save_dir, 'model_param.json')
             with open(sv_param, 'w') as file_obj:
+
                 json.dump(self.config, file_obj)
 
             print_log(output_namespace(self.args))
@@ -46,20 +52,53 @@ class SetupCallback(Callback):
 
 
 class EpochEndCallback(Callback):
+    def __init__(self):
+        # 初始化 avg_train_loss 为 None
+        self.avg_train_loss = None
+
     def on_train_epoch_end(self, trainer, pl_module, outputs=None):
-        self.avg_train_loss = trainer.callback_metrics.get('train_loss')
+        # 获取训练损失
+        avg_train_loss = trainer.callback_metrics.get('train_loss_epoch')
+        
+        # 将 avg_train_loss 设置为实例的属性
+        self.avg_train_loss = avg_train_loss
+        
+        print(f"[DEBUG] Train Epoch End - Avg Train Loss: {self.avg_train_loss}")
 
     def on_validation_epoch_end(self, trainer, pl_module):
         lr = trainer.optimizers[0].param_groups[0]['lr']
-        avg_val_loss = trainer.callback_metrics.get('val_loss')
+        avg_val_loss = trainer.callback_metrics.get('val_loss_epoch')
 
-        if hasattr(self, 'avg_train_loss'):
+        # 在验证 epoch 结束时，打印相关信息
+        print(f"[DEBUG] Validation Epoch End - Learning Rate: {lr}")
+        print(f"[DEBUG] Validation Epoch End - Training Loss (self.avg_train_loss): {self.avg_train_loss}")
+        print(f"[DEBUG] Validation Epoch End - Validation Loss: {avg_val_loss}")
+
+        if lr is None:
+            print("[ERROR] Learning rate (lr) is None.")
+        if self.avg_train_loss is None:
+            print("[ERROR] Training loss (self.avg_train_loss) is None.")
+        if avg_val_loss is None:
+            print("[ERROR] Validation loss (avg_val_loss) is None.")
+
+        # 检查是否所有值都存在
+        if lr is not None and self.avg_train_loss is not None and avg_val_loss is not None:
             print_log(f"Epoch {trainer.current_epoch}: Lr: {lr:.7f} | Train Loss: {self.avg_train_loss:.7f} | Vali Loss: {avg_val_loss:.7f}")
+        else:
+            print_log(f"Epoch {trainer.current_epoch}: Missing values for logging.")
+
+
+
+
 
 class BestCheckpointCallback(ModelCheckpoint):
     def on_validation_epoch_end(self, trainer, pl_module):
         super().on_validation_epoch_end(trainer, pl_module)
         checkpoint_callback = trainer.checkpoint_callback
+        if trainer.sanity_checking:
+            print("Running sanity check, skipping logging train loss.")
+            return
+        
         if checkpoint_callback and checkpoint_callback.best_model_path and trainer.global_rank == 0:
             best_path = checkpoint_callback.best_model_path
             shutil.copy(best_path, osp.join(osp.dirname(best_path), 'best.ckpt'))

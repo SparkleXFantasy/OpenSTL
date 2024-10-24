@@ -8,7 +8,7 @@ from .phydnet import PhyDNet
 from .predrnn import PredRNN
 from .predrnnpp import PredRNNpp
 from .predrnnv2 import PredRNNv2
-from .simvp import SimVP
+from .simvp import SimVP, MultiSimVP
 from .tau import TAU
 from .mmvp import MMVP
 from .swinlstm import SwinLSTM_D, SwinLSTM_B
@@ -31,9 +31,12 @@ method_maps = {
     'swinlstm': SwinLSTM_B,
     'wast': WaST
 }
+multi_method_maps = {
+    'multisimvp': MultiSimVP
+}
 
 __all__ = [
     'method_maps', 'ConvLSTM', 'E3DLSTM', 'MAU', 'MIM',
-    'PredRNN', 'PredRNNpp', 'PredRNNv2', 'PhyDNet', 'SimVP', 'TAU',
-    "MMVP", 'SwinLSTM_D', 'SwinLSTM_B', 'WaST'
+    'PredRNN', 'PredRNNpp', 'PredRNNv2', 'PhyDNet', 'SimVP', 'MultiSimVP','TAU',
+    "MMVP", 'SwinLSTM_D', 'SwinLSTM_B', 'WaST', 'multi_method_maps'
 ]

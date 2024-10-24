@@ -2,10 +2,15 @@ import random
 from functools import partial
 from itertools import repeat
 from typing import Callable
-from timm.data.distributed_sampler import OrderedDistributedSampler, RepeatAugSampler
+from timm.data.distributed_sampler import OrderedDistributedSampler, RepeatAugSampler, Sampler
+import bisect
 
 import torch.utils.data
 import numpy as np
+import math
+import torch
+from torch.utils.data.sampler import RandomSampler
+
 
 
 def worker_init(worker_id, worker_seeding='all'):
@@ -145,7 +150,8 @@ class PrefetchLoader:
 
 def create_loader(dataset,
                   batch_size,
-                  shuffle=True,
+                  shuffle=False,
+                  sampler=None,
                   is_training=False,
                   mean=None,
                   std=None,
@@ -160,19 +166,19 @@ def create_loader(dataset,
                   collate_fn=None,
                   persistent_workers=True,
                   worker_seeding='all'):
-    sampler = None
-    if distributed and not isinstance(dataset, torch.utils.data.IterableDataset):
-        if is_training:
-            if num_aug_repeats:
-                sampler = RepeatAugSampler(dataset, num_repeats=num_aug_repeats)
+    if sampler is None:
+        if distributed and not isinstance(dataset, torch.utils.data.IterableDataset):
+            if is_training:
+                if num_aug_repeats:
+                    sampler = RepeatAugSampler(dataset, num_repeats=num_aug_repeats)
+                else:
+                    sampler = torch.utils.data.distributed.DistributedSampler(dataset)
             else:
-                sampler = torch.utils.data.distributed.DistributedSampler(dataset)
-        else:
-            # This will add extra duplicate entries to result in equal num
-            # of samples per-process, will slightly alter validation results
-            sampler = OrderedDistributedSampler(dataset)
-    else:
-        assert num_aug_repeats==0, "RepeatAugment is not supported in non-distributed or IterableDataset"
+                # This will add extra duplicate entries to result in equal num
+                # of samples per-process, will slightly alter validation results
+                sampler = OrderedDistributedSampler(dataset)
+    # else:
+    #     assert num_aug_repeats==0, "RepeatAugment is not supported in non-distributed or IterableDataset"
 
     if collate_fn is None:
         collate_fn = torch.utils.data.dataloader.default_collate
@@ -266,3 +272,171 @@ def reshape_patch_back_tensor(patch_tensor, patch_size):
                                    patch_width * patch_size,
                                    img_channels])
     return img_tensor.permute(0, 1, 4, 2, 3)
+
+
+def random_split_dataset(dataset, split_ratio, seed=42):
+    from torch.utils.data import random_split
+    total_ratio = sum(split_ratio)
+    split_ratio = [x / total_ratio for x in split_ratio]
+    dataset_len = len(dataset)
+    dataset_split_len = [int(x * dataset_len) for x in split_ratio]
+    dataset_split_len[-1] = int(dataset_len - sum(dataset_split_len) + dataset_split_len[-1])
+    return random_split(dataset=dataset, lengths=dataset_split_len, generator=torch.Generator().manual_seed(seed))
+
+
+
+
+class ImprovedBatchSchedulerSampler(Sampler):
+    """
+    改进后的批次采样器，确保每个 batch 大小为 16，所有样本来自同一个数据集，按顺序采样，舍弃不满批次的样本。
+    """
+    def __init__(self, dataset, batch_size, shuffle=False):
+        self.dataset = dataset
+        self.batch_size = batch_size
+        self.number_of_datasets = len(dataset.datasets)
+        self.shuffle = shuffle
+        self.epoch = 0
+
+    def __len__(self):
+        # 计算所有数据集中的完整 batch 数量
+        total_batches = 0
+        for cur_dataset in self.dataset.datasets:
+            total_batches += len(cur_dataset) // self.batch_size
+        return total_batches
+
+    def __iter__(self):
+        # 创建每个数据集的采样器
+        dataset_iterators = []
+        g = torch.Generator()
+        g.manual_seed(self.epoch if self.shuffle else 0)
+
+        for dataset_idx in range(self.number_of_datasets):
+            cur_dataset = self.dataset.datasets[dataset_idx]
+            sampler = torch.utils.data.RandomSampler(cur_dataset, generator=g) if self.shuffle else torch.utils.data.SequentialSampler(cur_dataset)
+            dataset_iterators.append(iter(sampler))
+
+        final_batches = []
+
+        # 遍历每个数据集，按顺序采样完整的 batch
+        for dataset_idx, dataset_iterator in enumerate(dataset_iterators):
+            cur_samples = []
+            try:
+                while True:
+                    cur_sample = next(dataset_iterator)
+                    cur_samples.append((dataset_idx, cur_sample))
+
+                    # 当收集到一个完整的 batch 时，添加到最终的 batch 列表中
+                    if len(cur_samples) == self.batch_size:
+                        final_batches.append(cur_samples)
+                        cur_samples = []
+            except StopIteration:
+                # 舍弃不满批次的样本
+                pass
+
+        # 打乱所有的 batch（如果需要）
+        if self.shuffle:
+            random.shuffle(final_batches)
+
+        # 将每个 batch 中的 dataset_idx 和 sample_idx 写入文件
+        with open("debug_batch_indices.txt", "w") as file:
+            for batch_idx, batch in enumerate(final_batches):
+                dataset_indices = [item[0] for item in batch]
+                sample_indices = [item[1] for item in batch]
+                file.write(f"Batch {batch_idx} - Dataset Indices: {dataset_indices}, Sample Indices: {sample_indices}\n")
+
+        # 返回每个 batch 的迭代器
+        return iter(final_batches)
+
+    def set_epoch(self, epoch):
+        self.epoch = epoch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+# class BatchSchedulerSampler(torch.utils.data.sampler.Sampler):
+#     """
+#     iterate over tasks and provide a random batch per task in each mini-batch
+#     """
+#     def __init__(self, dataset, batch_size, rank, gpus, shuffle=False, epoch=0):
+#         self.dataset = dataset
+#         self.batch_size = batch_size
+#         self.number_of_datasets = len(dataset.datasets)
+#         self.largest_dataset_size = max([len(cur_dataset) for cur_dataset in dataset.datasets])
+
+#         self.number_selected_samples = int(self.batch_size * math.ceil(self.largest_dataset_size / self.batch_size) * len(self.dataset.datasets) / gpus)
+#         self.number_of_total_size = self.number_selected_samples*gpus
+#         print('number_selected_samples', self.number_selected_samples)
+#         print('total sample epoch', self.number_of_datasets * self.largest_dataset_size)
+#         self.gpus = gpus
+#         self.rank = rank
+#         self.shuffle = shuffle
+#         self.epoch = epoch
+
+#     def __len__(self):
+#         return self.number_selected_samples
+
+#     def __iter__(self):
+#         if self.shuffle:
+#             # deterministically shuffle based on epoch
+#             g = torch.Generator()
+#             g.manual_seed(self.epoch)
+#             # indices = torch.randperm(len(self.dataset), generator=g)
+#         else:
+#             g = torch.Generator()
+#             g.manual_seed(0)
+
+#         samplers_list = []
+#         sampler_iterators = []
+#         for dataset_idx in range(self.number_of_datasets):
+#             cur_dataset = self.dataset.datasets[dataset_idx]
+#             sampler = RandomSampler(cur_dataset, generator=g)
+#             samplers_list.append(sampler)
+#             cur_sampler_iterator = iter(list(sampler.__iter__())[self.rank:self.number_selected_samples:self.gpus])
+#             sampler_iterators.append(cur_sampler_iterator)
+
+#         push_index_val = [0] + self.dataset.cumulative_sizes[:-1]
+#         step = self.batch_size * self.number_of_datasets
+#         samples_to_grab = self.batch_size
+        
+#         # for this case we want to get all samples in dataset, this force us to resample from the smaller datasets
+#         epoch_samples = self.largest_dataset_size * self.number_of_datasets
+
+#         final_samples_list = []  # this is a list of indexes from the combined dataset
+#         for _ in range(0, epoch_samples, step):
+#             for i in range(self.number_of_datasets):
+#                 cur_batch_sampler = sampler_iterators[i]
+#                 cur_samples = []
+#                 for _ in range(samples_to_grab):
+#                     try:
+#                         cur_sample_org = cur_batch_sampler.__next__()
+#                         cur_sample = cur_sample_org + push_index_val[i]
+#                         cur_samples.append(cur_sample)
+#                     except StopIteration:
+#                         # got to the end of iterator - restart the iterator and continue to get samples
+#                         # until reaching "epoch_samples"
+#                         sampler_iterators[i] = iter(list(samplers_list[i].__iter__())[self.rank:self.number_of_total_size:self.gpus])
+#                         cur_batch_sampler = sampler_iterators[i]
+#                         cur_sample_org = cur_batch_sampler.__next__()
+#                         cur_sample = cur_sample_org + push_index_val[i]
+#                         cur_samples.append(cur_sample)
+#                 final_samples_list.extend(cur_samples)
+        
+#         return iter(final_samples_list[:self.number_selected_samples])
+    
+#     def set_epoch(self, epoch):
+#         self.epoch = epoch
+    

@@ -5,7 +5,6 @@ from openstl.modules import (ConvSC, ConvNeXtSubBlock, ConvMixerSubBlock, GASubB
                              HorNetSubBlock, MLPMixerSubBlock, MogaSubBlock, PoolFormerSubBlock,
                              SwinSubBlock, UniformerSubBlock, VANSubBlock, ViTSubBlock, TAUSubBlock)
 
-
 class SimVP_Model(nn.Module):
     r"""SimVP Model
 
@@ -48,10 +47,82 @@ class SimVP_Model(nn.Module):
         return Y
 
 
+class Multi_SimVP_Model(nn.Module):
+    r"""SimVP Model
+
+    Implementation of `SimVP: Simpler yet Better Video Prediction
+    <https://arxiv.org/abs/2206.05099>`_.
+
+    """
+    def __init__(self, enc_dec_configs, model_type='gSTA', mlp_ratio=8., drop=0.0, drop_path=0.0, **kwargs):
+        super(Multi_SimVP_Model, self).__init__()
+        encs_params = []
+        decs_params = []
+        self.hid_modules = nn.ModuleList()  
+
+        
+        for config in enc_dec_configs:
+            T, C, H, W = config['in_shape']    
+            H, W = int(H / 2**(config['N_S']/2)), int(W / 2**(config['N_S']/2))  
+            act_inplace = False
+            
+            
+            encs_params.append({'C_in': C, 'C_hid': config['hid_S'], 'N_S': config['N_S'], 'spatio_kernel': config['spatio_kernel_enc'], 'act_inplace': act_inplace})
+            decs_params.append({'C_hid': config['hid_S'], 'C_out': C, 'N_S': config['N_S'], 'spatio_kernel': config['spatio_kernel_enc'], 'act_inplace': act_inplace})
+            
+            
+            self.hid_modules.append(
+                MidMetaNet(T * config['hid_S'], config['hid_T'], config['N_T'],
+                           input_resolution=None, model_type=model_type,
+                           mlp_ratio=mlp_ratio, drop=drop, drop_path=drop_path)
+            )
+
+       
+        self.encs = nn.ModuleList([Encoder(**params) for params in encs_params])
+        self.decs = nn.ModuleList([Decoder(**params) for params in decs_params])
+
+    def forward(self, x_raw, data_cls_idx):
+        # 保存 batch 内容到文本文件
+        with open("batch_debug_info.txt", "a") as f:
+            # 打印 batch 的类型和维度信息
+            f.write(f"Batch type: {type(x_raw)}, shape: {x_raw.shape}\n")
+            
+            # 打印 encoder 和 decoder 的信息
+            f.write(f"Using encoder for data class {data_cls_idx}: {self.encs[data_cls_idx]}\n")
+            f.write(f"Using decoder for data class {data_cls_idx}: {self.decs[data_cls_idx]}\n")
+
+        # 原始的 forward 逻辑，假设需要解包维度
+        try:
+            B, T, C, H, W = x_raw.shape
+        except ValueError:
+            raise ValueError(f"Unexpected input shape: {x_raw.shape}, expected (B, T, C, H, W)")
+
+        x = x_raw.view(B * T, C, H, W)
+
+        # 使用对应数据集的 encoder
+        enc = self.encs[data_cls_idx]
+        embed, skip = enc(x)
+        _, C_, H_, W_ = embed.shape
+
+        z = embed.view(B, T, C_, H_, W_)
+        hid = self.hid_modules[data_cls_idx](z)
+        hid = hid.reshape(B * T, C_, H_, W_)
+        
+        # 使用对应数据集的 decoder
+        dec = self.decs[data_cls_idx]
+        Y = dec(hid, skip)
+        Y = Y.reshape(B, T, C, H, W)
+        return Y
+
+
+
 def sampling_generator(N, reverse=False):
     samplings = [False, True] * (N // 2)
-    if reverse: return list(reversed(samplings[:N]))
-    else: return samplings[:N]
+    if reverse:
+        return list(reversed(samplings[:N]))
+    else:
+        return samplings[:N]
+
 
 
 class Encoder(nn.Module):

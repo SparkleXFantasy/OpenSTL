@@ -7,6 +7,7 @@ import subprocess
 import sys
 from collections import defaultdict, OrderedDict
 from typing import Tuple
+import copy
 
 import torch
 import torchvision
@@ -86,6 +87,39 @@ def get_dataset(dataname, config):
     return load_data(**config)
 
 
+def get_concat_dataset(datanames, config):
+    from openstl.datasets import dataset_parameters
+    from openstl.datasets import load_concat_data_with_index
+
+    
+    configs_list = []
+    
+    
+    for dataname in datanames:
+        
+        new_config = copy.deepcopy(config)
+        
+        new_config.update(dataset_parameters[dataname])
+        new_config['method'] = 'MultiSimVP'
+
+        
+        if 'configs' in new_config:
+            del new_config['configs']
+
+        
+        configs_list.append(new_config)
+
+    
+    final_config = copy.deepcopy(config)
+    
+    final_config['configs'] = configs_list
+
+    
+    return load_concat_data_with_index(**final_config)
+
+
+
+
 def measure_throughput(model, input_dummy):
 
     def get_batch_size(H, W):
@@ -126,30 +160,55 @@ def measure_throughput(model, input_dummy):
     return Throughput
 
 
-def load_config(filename:str = None):
+def load_config(filename: str = None):
     """load and print config"""
     print('loading config from ' + filename + ' ...')
     try:
         configfile = Config(filename=filename)
         config = configfile._cfg_dict
+        config = copy.deepcopy(config)  
     except (FileNotFoundError, IOError):
         config = dict()
         print('warning: fail to load the config!')
     return config
 
 
-def update_config(args, config, exclude_keys=list()):
+def update_config(args, config, all_configs=None, exclude_keys=None):
     """update the args dict with a new config"""
+    if exclude_keys is None:
+        exclude_keys = []
+
+    if all_configs is None:
+        all_configs = []
+
     assert isinstance(args, dict) and isinstance(config, dict)
-    for k in config.keys():
-        if args.get(k, False):
-            if args[k] != config[k] and k not in exclude_keys and args[k] is not None:
-                print(f'overwrite config key -- {k}: {config[k]} -> {args[k]}')
-            else:
-                args[k] = config[k]
-        else:
-            args[k] = config[k]
+
+    current_config = config.copy()
+    all_configs.append(current_config)
+    
+    
+
+
+    for k, v in config.items():
+        
+        if k not in args:
+            args[k] = v
+        elif args[k] != v and k not in exclude_keys and args[k] is not None:
+            print(f'overwrite config key -- {k}: {args[k]} -> {v}')
+            args[k] = v
+
     return args
+
+
+    # for k in config.keys():
+    #     if args.get(k, False):
+    #         if args[k] != config[k] and k not in exclude_keys and args[k] is not None:
+    #             print(f'overwrite config key -- {k}: {config[k]} -> {args[k]}')
+    #         else:
+    #             args[k] = config[k]
+    #     else:
+    #         args[k] = config[k]
+
 
 
 def weights_to_cpu(state_dict: OrderedDict) -> OrderedDict:
@@ -178,3 +237,4 @@ def get_dist_info() -> Tuple[int, int]:
         rank = 0
         world_size = 1
     return rank, world_size
+

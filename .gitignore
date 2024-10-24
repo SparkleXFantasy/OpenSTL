@@ -139,3 +139,25 @@ configs_test/
 api/test.py
 configs/kinetics/simvp
 configs/bair/simvp
+
+
+# Ignore personal or system files
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.cache/
+.conda/
+.dotnet/
+.git-credentials
+.gitconfig
+.ipython/
+.jobs/
+.jupyter/
+.local/
+.python_history
+.ssh/
+.viminfo
+.vscode-server/
+.vscode/
+wget-hsts

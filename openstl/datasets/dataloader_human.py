@@ -134,6 +134,22 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
     return dataloader_train, dataloader_test, dataloader_test
 
 
+def load_dataset(batch_size, val_batch_size, data_root, num_workers=4,
+              pre_seq_length=4, aft_seq_length=4, in_shape=[4, 3, 256, 256],
+              distributed=False, use_augment=False, use_prefetcher=False, drop_last=False):
+
+    data_root = os.path.join(data_root, 'human')
+    image_size = in_shape[-1] if in_shape is not None else 256
+    train_set = HumanDataset(data_root, os.path.join(data_root, 'train.txt'), image_size,
+                             pre_seq_length=pre_seq_length, aft_seq_length=aft_seq_length,
+                             step=5, use_augment=use_augment)
+    test_set = HumanDataset(data_root, os.path.join(data_root, 'test.txt'), image_size,
+                            pre_seq_length=pre_seq_length, aft_seq_length=aft_seq_length,
+                            step=5, use_augment=False)
+
+    return train_set, test_set, test_set
+
+
 if __name__ == '__main__':
     
     dataloader_train, _, dataloader_test = \
