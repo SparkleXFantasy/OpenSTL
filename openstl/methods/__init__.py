@@ -32,11 +32,11 @@ method_maps = {
     'wast': WaST
 }
 multi_method_maps = {
-    "simvp": MultiSimVP    
+    'multisimvp': MultiSimVP
 }
 
 __all__ = [
     'method_maps', 'ConvLSTM', 'E3DLSTM', 'MAU', 'MIM',
-    'PredRNN', 'PredRNNpp', 'PredRNNv2', 'PhyDNet', 'SimVP', 'TAU',
-    "MMVP", 'SwinLSTM_D', 'SwinLSTM_B', 'WaST'
+    'PredRNN', 'PredRNNpp', 'PredRNNv2', 'PhyDNet', 'SimVP', 'MultiSimVP','TAU',
+    "MMVP", 'SwinLSTM_D', 'SwinLSTM_B', 'WaST', 'multi_method_maps'
 ]

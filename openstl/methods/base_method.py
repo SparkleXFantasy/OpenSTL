@@ -5,6 +5,7 @@ import lightning as l
 from openstl.utils import print_log, check_dir
 from openstl.core import get_optim_scheduler, timm_schedulers
 from openstl.core import metric
+import torch
 
 
 class Base_method(l.LightningModule):
@@ -95,6 +96,12 @@ class Base_multi_method(l.LightningModule):
 
     def __init__(self, enc_dec_configs, **args):
         super().__init__()
+       
+
+
+        # 只保存公共参数和 enc_dec_configs
+        self.save_hyperparameters({**args, 'enc_dec_configs': enc_dec_configs})
+        
 
         if 'weather' in args['dataname']:
             self.metric_list, self.spatial_norm = args['metrics'], True
@@ -102,7 +109,7 @@ class Base_multi_method(l.LightningModule):
         else:
             self.metric_list, self.spatial_norm, self.channel_names = args['metrics'], False, None
 
-        self.save_hyperparameters()
+        
         self.model = self._build_model(enc_dec_configs, **args)
         self.criterion = nn.MSELoss()
         self.test_outputs = []
@@ -138,17 +145,60 @@ class Base_multi_method(l.LightningModule):
         NotImplementedError
     
     def training_step(self, batch, batch_idx):
-        NotImplementedError
 
-    def validation_step(self, batch, batch_idx):
+        
+
         dataset_idx, batch_data = batch
         batch_x, batch_y = batch_data
+
+
+
+    
+        
+
+        
+        pred_y = self(batch_x, dataset_idx)
+      
+
+        
+        loss = self.criterion(pred_y, batch_y)
+      
+
+        # 记录损失值
+        self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True)
+      
+
+        return loss
+
+
+    def validation_step(self, batch, batch_idx):
+        
+    
+
+        dataset_idx, batch_data = batch
+        batch_x, batch_y = batch_data
+        #print(f"Batch X shape: {batch_x.shape}, Batch Y shape: {batch_y.shape}")
+        #print(f"Dataset Index: {dataset_idx}")
         pred_y = self(batch_x, dataset_idx, batch_y)
         loss = self.criterion(pred_y, batch_y)
-        self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=False)
+        self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
         return loss
+
+
+
+    # def validation_step(self, batch, batch_idx):
+    #     print(f"Batch type: {type(batch)}, Batch length: {len(batch)}")
+
+    #     dataset_idx, batch_data = batch
+    #     batch_x, batch_y = batch_data
+    #     pred_y = self(batch_x, dataset_idx, batch_y)
+    #     loss = self.criterion(pred_y, batch_y)
+    #     self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=False)
+    #     return loss
+
     
     def test_step(self, batch, batch_idx):
+
         dataset_idx, batch_data = batch
         batch_x, batch_y = batch_data
         pred_y = self(batch_x, dataset_idx, batch_y)

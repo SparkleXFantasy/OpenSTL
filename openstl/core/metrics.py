@@ -200,7 +200,7 @@ def metric(pred, true, mean=None, std=None, metrics=['mae', 'mse'],
         c_width = pred.shape[2] // c_group
     else:
         channel_names, c_group, c_width = None, None, None
-    print(f'Metrics:{metrics}')
+    
     if 'mse' in metrics:
         if channel_names is None:
             eval_res['mse'] = MSE(pred, true, spatial_norm)

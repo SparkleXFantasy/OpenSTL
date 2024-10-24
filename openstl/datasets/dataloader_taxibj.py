@@ -9,7 +9,7 @@ from openstl.datasets.utils import create_loader
 
 class TaxibjDataset(Dataset):
     """Taxibj <https://arxiv.org/abs/1610.00081>`_ Dataset"""
-
+    
     def __init__(self, X, Y, use_augment=False, data_name='taxibj'):
         super(TaxibjDataset, self).__init__()
         self.X = (X+1) / 2  # channel is 2

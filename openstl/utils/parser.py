@@ -29,7 +29,7 @@ def create_parser():
     parser.add_argument('--val_batch_size', '-vb', default=16, type=int, help='Validation batch size')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--data_root', default='./data')
-    parser.add_argument('--dataname', '-d', default='mmnist', type=str,
+    parser.add_argument('--dataname', '-d', default='', type=str,
                         choices=['bair', 'mfmnist', 'mmnist', 'mmnist_cifar', 'noisymmnist', 'taxibj', 'human',
                                 'kth', 'kth20', 'kth40', 'kitticaltech', 'kinetics', 'kinetics400', 'kinetics600',
                                 'weather', 'weather_t2m_5_625', 'weather_mv_4_28_s6_5_625', 'weather_mv_4_4_s6_5_625',
@@ -67,7 +67,7 @@ def create_parser():
                         help='Whether to allow overwriting the provided config file with args')
 
     # Training parameters (optimizer)
-    parser.add_argument('--epoch', '-e', default=None, type=int, help='end epochs (default: 200)')
+    parser.add_argument('--epoch', '-e', default=200, type=int, help='end epochs (default: 200)')
     parser.add_argument('--log_step', default=1, type=int, help='Log interval by step')
     parser.add_argument('--opt', default='adam', type=str, metavar='OPTIMIZER',
                         help='Optimizer (default: "adam"')
@@ -132,15 +132,15 @@ def default_parser():
         'val_batch_size': 16,
         'num_workers': 4,
         'data_root': './data',
-        'dataname': 'mmnist',
-        'pre_seq_length': 10,
-        'aft_seq_length': 10,
-        'total_length': 20,
+        'datanames': '',
+        'pre_seq_length': 4,
+        'aft_seq_length': 4,
+        'total_length': 1,
         'use_augment': False,
         'use_prefetcher': False,
         'drop_last': False,
         # method parameters
-        'method': 'SimVP',
+        'method': 'MultiSimVP',
         'config_file': None,
         'model_type': 'gSTA',
         'drop': 0,

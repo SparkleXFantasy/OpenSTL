@@ -14,8 +14,7 @@ except ImportError:
 from openstl.datasets.utils import create_loader
 
 
-class BAIRDataset(Dataset):
-    """ BAIR Robot Pushing Action Dataset
+class BAIRDataset(Dataset):    """ BAIR Robot Pushing Action Dataset
         <https://arxiv.org/abs/1710.05268>`_
 
     Args:

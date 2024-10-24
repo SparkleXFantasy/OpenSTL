@@ -6,7 +6,7 @@ import os.path as osp
 from fvcore.nn import FlopCountAnalysis, flop_count_table
 
 import torch
-
+import copy
 from openstl.methods import method_maps, multi_method_maps
 from openstl.datasets import BaseDataModule
 from openstl.utils import (get_dataset, get_concat_dataset, measure_throughput, load_config, update_config, SetupCallback, EpochEndCallback, BestCheckpointCallback)
@@ -14,58 +14,130 @@ from openstl.utils import (get_dataset, get_concat_dataset, measure_throughput, 
 from lightning import seed_everything, Trainer
 import lightning.pytorch.callbacks as lc
 
-
 class BaseExperiment(object):
     """The basic class of PyTorch training and evaluation."""
-
-    def __init__(self, args, dataloaders=None, strategy='auto'):
+    
+    def __init__(self, args, dataloaders=None, strategy='auto', config=None):
         """Initialize experiments (non-dist as an example)"""
+
         self.args = args
-        self.config = self.args.__dict__
+        
+        self.config = config
+        
+
         self.method = None
-        self.args.method = self.args.method.lower()
+        self.args.method = 'multisimvp'
+        
         self._dist = self.args.dist
         base_dir = args.res_dir if args.res_dir is not None else 'work_dirs'
-        save_dir = osp.join(base_dir, args.ex_name if not args.ex_name.startswith(args.res_dir) \
-            else args.ex_name.split(args.res_dir+'/')[-1])
+        save_dir = osp.join(base_dir, args.ex_name if not args.ex_name.startswith(args.res_dir)
+                            else args.ex_name.split(args.res_dir + '/')[1])
         ckpt_dir = osp.join(save_dir, 'checkpoints')
 
+
+        configs_copy = copy.deepcopy(self.config.get('configs', []))
+        
+        
+        if configs_copy:
+            self.data = self._get_data(dataloaders)
+        
+
+        
+        # if 'configs' in self.config:
+        #     self.config.pop('configs')
+            
+        
+
         seed_everything(args.seed)
-        self.data = self._get_data(dataloaders)
-        if self.args.configs != []:    # multi encoder decoders
+
+       
+
+        
+        # 1. 修改 enc_dec_configs 构建部分
+        if configs_copy:
             enc_dec_configs = []
-            for c in self.args.configs:
-                config = dict()
-                cfg_path = osp.join('./configs_multi', c)
-                config = update_config(config, load_config(cfg_path))
+
+            # 只保留模型特有的参数到 enc_dec_configs
+            for config in configs_copy:
                 enc_dec_config = {}
-                for k in ['spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T', 'N_T', 'N_S', 'in_shape', 'pre_seq_length', 'aft_seq_length', 'total_length']:
+                for k in [
+                    'spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T',
+                    'N_T', 'N_S', 'in_shape', 'pre_seq_length', 'aft_seq_length',
+                    'total_length'
+                ]:
                     if k in config:
                         enc_dec_config[k] = config[k]
+
+                if 'metrics' in config:
+                    enc_dec_config['metrics'] = config['metrics']
+
                 enc_dec_configs.append(enc_dec_config)
-            self.method = multi_method_maps[self.args.method](enc_dec_configs, steps_per_epoch=len(self.data.train_loader), \
-                test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
+
+            all_metrics = [config['metrics'] for config in enc_dec_configs if 'metrics' in config]
+            
+
+            # 2. 从全局配置中提取非模型特有的参数
+            common_args = {
+                'sched': configs_copy[0].get('sched', 'cosine'),
+                'lr': configs_copy[0].get('lr', 1e-3),
+                'warmup_epoch': configs_copy[0].get('warmup_epoch', 0),
+                'epoch': configs_copy[0].get('epoch', 200),
+                'steps_per_epoch': len(self.data.train_loader),
+                'test_mean': self.data.test_mean,
+                'test_std': self.data.test_std,
+                'save_dir': save_dir,
+                'metrics': all_metrics,
+            }
+
+            # 合并全局配置
+            final_config = {**self.config, **common_args}
+
+            # 3. 初始化 self.method
+            self.method = multi_method_maps[self.args.method](
+                enc_dec_configs=enc_dec_configs,
+                **final_config
+            )
+            print(self.config)
+
+            
         else:
-            self.method = method_maps[self.args.method](steps_per_epoch=len(self.data.train_loader), \
-                test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
-        callbacks, self.save_dir = self._load_callbacks(args, save_dir, ckpt_dir)
+            
+            self.method = method_maps[self.args.method](
+                steps_per_epoch=len(self.data.train_loader),
+                test_mean=self.data.test_mean,
+                test_std=self.data.test_std,
+                save_dir=save_dir,
+                **self.config
+            )
+
+        #callbacks, self.save_dir = self._load_callbacks(args, save_dir, ckpt_dir)
+        callbacks = []
         self.trainer = self._init_trainer(self.args, callbacks, strategy)
 
-    def _init_trainer(self, args, callbacks, strategy):
-        return Trainer(devices=args.gpus,  # Use these GPUs
-                       max_epochs=args.epoch,  # Maximum number of epochs to train for
-                    #    strategy=strategy,   # 'ddp', 'deepspeed_stage_2', 'ddp_find_unused_parameters_false'
-                       strategy='ddp',   # 'ddp', 'deepspeed_stage_2', 'ddp_find_unused_parameters_false'
-                       accelerator='gpu',  # Use distributed data parallel
-                       callbacks=callbacks
-                    )
 
+
+
+    def _init_trainer(self, args, callbacks, strategy):
+        print(f"[DEBUG] Initializing Trainer: devices={args.gpus}, max_epochs={args.epoch}, strategy={strategy}, accelerator='gpu'")
+        print(f"arg.epoch 的大小是{args.epoch}")
+        return Trainer(devices=args.gpus,
+                    max_epochs=args.epoch,
+                    strategy='auto',
+                    accelerator='gpu',
+                    callbacks=callbacks,
+                    num_sanity_val_steps=0,
+                    
+                    limit_train_batches=0.001,  # 设置为 1% 的 batch 用于调试
+                    limit_val_batches=0.001, 
+                    log_every_n_steps=1,  # 每隔几步日志
+                    enable_progress_bar=True, )
+        
     def _load_callbacks(self, args, save_dir, ckpt_dir):
         method_info = None
         if self._dist == 0:
             if not self.args.no_display_method_info:
-                method_info = self.display_method_info(args)
-
+                #  method_info = self.display_method_info(args)
+                method_info = None
         setup_callback = SetupCallback(
             prefix = 'train' if (not args.test) else 'test',
             setup_time = time.strftime('%Y%m%d_%H%M%S', time.localtime()),
@@ -100,6 +172,7 @@ class BaseExperiment(object):
                 train_loader, vali_loader, test_loader = \
                 get_concat_dataset(self.args.datanames, self.config)
             else:
+                
                 train_loader, vali_loader, test_loader = \
                     get_dataset(self.args.dataname, self.config)
         else:
@@ -108,7 +181,15 @@ class BaseExperiment(object):
         return BaseDataModule(train_loader, vali_loader, test_loader)
 
     def train(self):
+        #print(f"[DEBUG] Training method: {self.method}")
+        print(f"[DEBUG] Model has 'training_step' method: {'training_step' in dir(self.method)}")
+        #print(f"[DEBUG] Model details before training: {self.method}")  
+        print(f"[DEBUG] Model class: {self.method.__class__.__name__}")
+        #print(f"[DEBUG] Model training_step function: {self.method.training_step}")
+
+
         self.trainer.fit(self.method, self.data, ckpt_path=self.args.ckpt_path if self.args.ckpt_path else None)
+
 
     def test(self):
         if self.args.test == True:
@@ -161,3 +242,40 @@ class BaseExperiment(object):
         else:
             fps = ''
         return info, flops, fps, dash_line
+
+
+        # class BaseExperiment(object):
+#     """The basic class of PyTorch training and evaluation."""
+
+#     def __init__(self, args, dataloaders=None, strategy='auto'):
+#         """Initialize experiments (non-dist as an example)"""
+#         self.args = args
+#         self.config = self.args.__dict__
+#         self.method = None
+#         self.args.method = self.args.method.lower()
+#         self._dist = self.args.dist
+#         base_dir = args.res_dir if args.res_dir is not None else 'work_dirs'
+#         save_dir = osp.join(base_dir, args.ex_name if not args.ex_name.startswith(args.res_dir) \
+#             else args.ex_name.split(args.res_dir+'/')[-1])
+#         ckpt_dir = osp.join(save_dir, 'checkpoints')
+
+#         seed_everything(args.seed)
+#         self.data = self._get_data(dataloaders)
+#         if self.args.configs != []:    # multi encoder decoders
+#             enc_dec_configs = []
+#             for c in self.args.configs:
+#                 config = dict()
+#                 cfg_path = osp.join('./configs_multi', c)
+#                 config = update_config(config, load_config(cfg_path))
+#                 enc_dec_config = {}
+#                 for k in ['spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T', 'N_T', 'N_S', 'in_shape', 'pre_seq_length', 'aft_seq_length', 'total_length']:
+#                     if k in config:
+#                         enc_dec_config[k] = config[k]
+#                 enc_dec_configs.append(enc_dec_config)
+#             self.method = multi_method_maps[self.args.method](enc_dec_configs, steps_per_epoch=len(self.data.train_loader), \
+#                 test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
+#         else:
+#             self.method = method_maps[self.args.method](steps_per_epoch=len(self.data.train_loader), \
+#                 test_mean=self.data.test_mean, test_std=self.data.test_std, save_dir=save_dir, **self.config)
+#         callbacks, self.save_dir = self._load_callbacks(args, save_dir, ckpt_dir)
+#         self.trainer = self._init_trainer(self.args, callbacks, strategy)
