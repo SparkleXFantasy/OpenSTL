@@ -127,9 +127,9 @@ class BaseExperiment(object):
                     callbacks=callbacks,
                     num_sanity_val_steps=0,
                     
-                    limit_train_batches=0.001,  # 设置为 1% 的 batch 用于调试
-                    limit_val_batches=0.001, 
-                    log_every_n_steps=1,  # 每隔几步日志
+                    #limit_train_batches=0.001,  
+                    #limit_val_batches=0.001, 
+                    #log_every_n_steps=1,  
                     enable_progress_bar=True, )
         
     def _load_callbacks(self, args, save_dir, ckpt_dir):
