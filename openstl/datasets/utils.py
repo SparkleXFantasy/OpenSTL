@@ -285,11 +285,8 @@ def random_split_dataset(dataset, split_ratio, seed=42):
 
 
 
-
 class ImprovedBatchSchedulerSampler(Sampler):
-    """
-    改进后的批次采样器，确保每个 batch 大小为 16，所有样本来自同一个数据集，按顺序采样，舍弃不满批次的样本。
-    """
+
     def __init__(self, dataset, batch_size, shuffle=False):
         self.dataset = dataset
         self.batch_size = batch_size
@@ -297,15 +294,15 @@ class ImprovedBatchSchedulerSampler(Sampler):
         self.shuffle = shuffle
         self.epoch = 0
 
+       
+        self.num_batches_per_dataset = [len(cur_dataset) // batch_size for cur_dataset in dataset.datasets]
+        self.max_num_batches = max(self.num_batches_per_dataset)
+
     def __len__(self):
-        # 计算所有数据集中的完整 batch 数量
-        total_batches = 0
-        for cur_dataset in self.dataset.datasets:
-            total_batches += len(cur_dataset) // self.batch_size
-        return total_batches
+        
+        return self.max_num_batches * self.number_of_datasets
 
     def __iter__(self):
-        # 创建每个数据集的采样器
         dataset_iterators = []
         g = torch.Generator()
         g.manual_seed(self.epoch if self.shuffle else 0)
@@ -317,38 +314,43 @@ class ImprovedBatchSchedulerSampler(Sampler):
 
         final_batches = []
 
-        # 遍历每个数据集，按顺序采样完整的 batch
-        for dataset_idx, dataset_iterator in enumerate(dataset_iterators):
-            cur_samples = []
-            try:
-                while True:
-                    cur_sample = next(dataset_iterator)
+  
+        for i in range(self.max_num_batches):
+            for dataset_idx in range(self.number_of_datasets):
+                cur_samples = []
+                try:
+                    for _ in range(self.batch_size):
+                        cur_sample = next(dataset_iterators[dataset_idx])
+                        cur_samples.append((dataset_idx, cur_sample))
+                except StopIteration:
+                  
+                    cur_dataset = self.dataset.datasets[dataset_idx]
+                    sampler = torch.utils.data.RandomSampler(cur_dataset, generator=g) if self.shuffle else torch.utils.data.SequentialSampler(cur_dataset)
+                    dataset_iterators[dataset_idx] = iter(sampler)
+                    cur_sample = next(dataset_iterators[dataset_idx])
                     cur_samples.append((dataset_idx, cur_sample))
 
-                    # 当收集到一个完整的 batch 时，添加到最终的 batch 列表中
-                    if len(cur_samples) == self.batch_size:
-                        final_batches.append(cur_samples)
-                        cur_samples = []
-            except StopIteration:
-                # 舍弃不满批次的样本
-                pass
+                
+                while len(cur_samples) < self.batch_size:
+                    cur_samples.append(cur_samples[-1])
 
-        # 打乱所有的 batch（如果需要）
+                final_batches.append(cur_samples)
+
         if self.shuffle:
             random.shuffle(final_batches)
 
-        # 将每个 batch 中的 dataset_idx 和 sample_idx 写入文件
+      
         with open("debug_batch_indices.txt", "w") as file:
             for batch_idx, batch in enumerate(final_batches):
                 dataset_indices = [item[0] for item in batch]
                 sample_indices = [item[1] for item in batch]
                 file.write(f"Batch {batch_idx} - Dataset Indices: {dataset_indices}, Sample Indices: {sample_indices}\n")
 
-        # 返回每个 batch 的迭代器
         return iter(final_batches)
 
     def set_epoch(self, epoch):
         self.epoch = epoch
+
 
 
 

@@ -143,46 +143,51 @@ class Base_multi_method(l.LightningModule):
 
     def forward(self, batch):
         NotImplementedError
-    
+
     def training_step(self, batch, batch_idx):
-
-        
-
+        # 解包 batch
         dataset_idx, batch_data = batch
         batch_x, batch_y = batch_data
 
-
-
-    
-        
-
-        
+        # 模型前向传播，包含 dataset_idx 以便于根据数据集调整行为
         pred_y = self(batch_x, dataset_idx)
-      
 
-        
-        loss = self.criterion(pred_y, batch_y)
-      
+        # 根据不同的 dataset_idx 处理目标和预测的长度
+        if dataset_idx == 2:  # 如果是第三个数据集
+            # 假设第三个数据集的 batch_y 长度为 12
+            loss = self.criterion(pred_y[:, :12], batch_y)  # 使用 12 帧的预测和目标进行损失计算
+        else:
+            # 如果是第一个或第二个数据集，目标长度为 4
+            loss = self.criterion(pred_y[:, :4], batch_y)  # 使用前 4 帧的预测和目标进行损失计算
 
         # 记录损失值
         self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True)
-      
 
         return loss
+
 
 
     def validation_step(self, batch, batch_idx):
-        
-    
-
+        # 解包 batch
         dataset_idx, batch_data = batch
         batch_x, batch_y = batch_data
-        #print(f"Batch X shape: {batch_x.shape}, Batch Y shape: {batch_y.shape}")
-        #print(f"Dataset Index: {dataset_idx}")
-        pred_y = self(batch_x, dataset_idx, batch_y)
-        loss = self.criterion(pred_y, batch_y)
-        self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
+
+        # 前向传播，包含 dataset_idx 以便于根据数据集调整行为
+        pred_y = self(batch_x, dataset_idx)
+
+        # 根据不同的 dataset_idx 处理目标和预测的长度
+        if dataset_idx == 2:  # 如果是第三个数据集
+            # 假设第三个数据集的目标长度为 12
+            loss = self.criterion(pred_y[:, :12], batch_y)  # 使用 12 帧的预测和目标进行损失计算
+        else:
+            # 如果是第一个或第二个数据集，目标长度为 4
+            loss = self.criterion(pred_y[:, :4], batch_y)  # 使用前 4 帧的预测和目标进行损失计算
+
+        # 记录验证损失
+        self.log('val_loss', loss, on_step=False, on_epoch=True, prog_bar=True, logger=True)
+
         return loss
+
 
 
 
@@ -198,13 +203,31 @@ class Base_multi_method(l.LightningModule):
 
     
     def test_step(self, batch, batch_idx):
-
+        # 解包 batch
         dataset_idx, batch_data = batch
         batch_x, batch_y = batch_data
-        pred_y = self(batch_x, dataset_idx, batch_y)
-        outputs = {'inputs': batch_x.cpu().numpy(), 'preds': pred_y.cpu().numpy(), 'trues': batch_y.cpu().numpy()}
+
+        # 前向传播，包含 dataset_idx 以便于根据数据集调整行为
+        pred_y = self(batch_x, dataset_idx)
+
+        # 根据不同的 dataset_idx 处理预测的长度
+        if dataset_idx == 2:  # 如果是第三个数据集
+            pred_y = pred_y[:, :12]  # 使用 12 帧的预测
+        else:
+            pred_y = pred_y[:, :4]  # 使用 4 帧的预测
+
+        # 将输入、预测和真实值保存到输出中
+        outputs = {
+            'inputs': batch_x.cpu().numpy(),
+            'preds': pred_y.cpu().numpy(),
+            'trues': batch_y.cpu().numpy()
+        }
+
+        # 将结果追加到 test_outputs 列表中
         self.test_outputs.append(outputs)
+
         return outputs
+
 
     def on_test_epoch_end(self):
         results_all = {}

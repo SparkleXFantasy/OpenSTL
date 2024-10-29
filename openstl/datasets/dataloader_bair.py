@@ -14,7 +14,8 @@ except ImportError:
 from openstl.datasets.utils import create_loader
 
 
-class BAIRDataset(Dataset):    """ BAIR Robot Pushing Action Dataset
+class BAIRDataset(Dataset):
+    """ BAIR Robot Pushing Action Dataset
         <https://arxiv.org/abs/1710.05268>`_
 
     Args:
@@ -227,7 +228,7 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
     img_height = in_shape[-2] if in_shape is not None else 64
     img_width = in_shape[-1] if in_shape is not None else 64
     input_param = {
-        'data_path': os.path.join(data_root, 'softmotion30_44k'),
+        'data_path': os.path.join(data_root, 'bair'),
         'image_height': img_height,
         'image_width': img_width,
         'minibatch_size': batch_size,
@@ -281,7 +282,7 @@ def load_dataset(batch_size, val_batch_size, data_root, num_workers=4,
     img_height = in_shape[-2] if in_shape is not None else 64
     img_width = in_shape[-1] if in_shape is not None else 64
     input_param = {
-        'data_path': os.path.join(data_root, 'softmotion30_44k'),
+        'data_path': os.path.join(data_root, 'bair'),
         'image_height': img_height,
         'image_width': img_width,
         'minibatch_size': batch_size,

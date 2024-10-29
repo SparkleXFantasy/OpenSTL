@@ -4,7 +4,7 @@ import sys
 import time
 import os.path as osp
 from fvcore.nn import FlopCountAnalysis, flop_count_table
-
+from lightning.pytorch.strategies import DDPStrategy
 import torch
 import copy
 from openstl.methods import method_maps, multi_method_maps
@@ -120,10 +120,11 @@ class BaseExperiment(object):
     def _init_trainer(self, args, callbacks, strategy):
         print(f"[DEBUG] Initializing Trainer: devices={args.gpus}, max_epochs={args.epoch}, strategy={strategy}, accelerator='gpu'")
         print(f"arg.epoch 的大小是{args.epoch}")
-        return Trainer(devices=args.gpus,
+        return Trainer(devices=[0, 1], 
                     max_epochs=args.epoch,
-                    strategy='auto',
+                    strategy=DDPStrategy(find_unused_parameters=True),
                     accelerator='gpu',
+                    precision=16,
                     callbacks=callbacks,
                     num_sanity_val_steps=0,
                     

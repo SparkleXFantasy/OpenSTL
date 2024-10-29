@@ -65,6 +65,7 @@ class MultiSimVP(Base_multi_method):
         return Multi_SimVP_Model(enc_dec_configs, **kwargs)
     
     def forward(self, batch_x, data_cls_idx, batch_y=None, **kwargs):
+        
         if isinstance(data_cls_idx, (list, torch.Tensor)):
             data_cls_idx = data_cls_idx[0].item()
         elif isinstance(data_cls_idx, int):
@@ -103,48 +104,48 @@ class MultiSimVP(Base_multi_method):
 
         return pred_y
     
-def training_step(self, batch, batch_idx):
-    print(f"[DEBUG] Training Step Called - Batch {batch_idx}")
-    print("进来trainingstep了")
+# def training_step(self, batch, batch_idx):
+#     print(f"[DEBUG] Training Step Called - Batch {batch_idx}")
     
-    dataset_idx, batch_data = batch
+    
+#     dataset_idx, batch_data = batch
 
    
-    if dataset_idx == 0:
+#     if dataset_idx == 0:
         
-        batch_x = batch_data[:, :8]  
-        batch_y = batch_data[:, 8:]  
-        print(f"[DEBUG] Dataset Index: {dataset_idx} - Splitting into X: 8 frames, Y: 8 frames")
+#         batch_x = batch_data[:, :8]  
+#         batch_y = batch_data[:, 8:]  
+#         print(f"[DEBUG] Dataset Index: {dataset_idx} - Splitting into X: 8 frames, Y: 8 frames")
         
-    elif dataset_idx == 1:
+#     elif dataset_idx == 1:
         
-        batch_x = batch_data[:, :8]  
-        batch_y = batch_data[:, 8:]  
-        print(f"[DEBUG] Dataset Index: {dataset_idx} - Splitting into X: 8 frames, Y: 8 frames")
+#         batch_x = batch_data[:, :8]  
+#         batch_y = batch_data[:, 8:]  
+#         print(f"[DEBUG] Dataset Index: {dataset_idx} - Splitting into X: 8 frames, Y: 8 frames")
 
-    elif dataset_idx == 2:
+#     elif dataset_idx == 2:
         
-        batch_x = batch_data[:, :4]  
-        batch_y = batch_data[:, 4:]  
-        print(f"[DEBUG] Dataset Index: {dataset_idx} - Splitting into X: 4 frames, Y: 12 frames")
+#         batch_x = batch_data[:, :4]  
+#         batch_y = batch_data[:, 4:]  
+#         print(f"[DEBUG] Dataset Index: {dataset_idx} - Splitting into X: 4 frames, Y: 12 frames")
 
-    else:
-        raise ValueError(f"Unexpected dataset_idx: {dataset_idx}")
+#     else:
+#         raise ValueError(f"Unexpected dataset_idx: {dataset_idx}")
 
    
-    print(f"[DEBUG] Dataset Index: {dataset_idx}, Batch X shape: {batch_x.shape}, Batch Y shape: {batch_y.shape}")
+#     print(f"[DEBUG] Dataset Index: {dataset_idx}, Batch X shape: {batch_x.shape}, Batch Y shape: {batch_y.shape}")
 
     
-    pred_y = self(batch_x, dataset_idx)
-    print(f"[DEBUG] Prediction Y shape: {pred_y.shape}")
+#     pred_y = self(batch_x, dataset_idx)
+#     print(f"[DEBUG] Prediction Y shape: {pred_y.shape}")
 
     
-    loss = self.criterion(pred_y, batch_y)
-    print(f"[DEBUG] Loss for Batch {batch_idx}: {loss.item()}")
+#     loss = self.criterion(pred_y, batch_y)
+#     print(f"[DEBUG] Loss for Batch {batch_idx}: {loss.item()}")
 
-    # 记录损失值
-    self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True)
-    print(f"[DEBUG] Log Called for Train Loss - Batch {batch_idx}")
+#     # 记录损失值
+#     self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True)
+#     print(f"[DEBUG] Log Called for Train Loss - Batch {batch_idx}")
 
-    return loss
+#     return loss
 

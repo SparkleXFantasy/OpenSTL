@@ -134,7 +134,7 @@ def save_batches_to_file(dataloader, filename='batch_details.txt'):
                 else:
                     f.write(f"  Sample {i} type: {type(sample)}\n")
             f.write("\n")
-            if batch_idx >= 1:  # 只保存前两个 batch，防止信息量太大
+            if batch_idx >= 1:  
                 break
 
 
@@ -165,24 +165,24 @@ def custom_collate_fn(batch):
 
         # 处理 batch 中每个元素
         for idx, item in enumerate(batch):
-            # 如果 item 是一个列表并且长度为 4
-            if isinstance(item, list) and len(item) == 4:
+            
+            if isinstance(item, list) and len(item) == 16:
                 for sub_idx, sub_item in enumerate(item):
-                    # 检查 sub_item 是否是元组，并且长度为 2
+                    
                     if not isinstance(sub_item, tuple) or len(sub_item) != 2:
                         file.write(f"Sub-element {sub_idx} in Sample {idx} is not valid. Type: {type(sub_item)}, Value: {sub_item}\n")
                     else:
                         dataset_idx, data = sub_item
                         if not isinstance(dataset_idx, int):
                             file.write(f"Sub-element {sub_idx} in Sample {idx} has invalid `dataset_idx` type: {type(dataset_idx)}, value: {dataset_idx}\n")
-                        # 检查 data 是否为 (tensor1, tensor2) 的元组
+                        
                         if isinstance(data, tuple) and len(data) == 2:
                             pre, aft = data
                             if isinstance(pre, torch.Tensor) and isinstance(aft, torch.Tensor):
                                 file.write(f"  Sample {idx}, Sub-sample {sub_idx} contains two tensors:\n")
                                 file.write(f"    Pre tensor shape: {pre.shape}\n")
                                 file.write(f"    Aft tensor shape: {aft.shape}\n")
-                                # 将每个 pre 和 aft 张量分别添加到对应的列表中
+                                
                                 batch_pre_list.append(pre)
                                 batch_aft_list.append(aft)
                             else:
@@ -192,10 +192,10 @@ def custom_collate_fn(batch):
             else:
                 file.write(f"  Sample {idx} is not a valid list of 4 elements. Type: {type(item)}, Length: {len(item)}, Value: {item}\n")
 
-        # 在进行任何进一步操作前先保存当前已收集的信息
+        
         file.write("=== End of Batch Information ===\n\n")
 
-        # 如果 batch_pre_list 和 batch_aft_list 非空，则将它们合并为张量
+        
         if batch_pre_list and batch_aft_list:
             combined_pre = torch.stack(batch_pre_list, dim=0)
             combined_aft = torch.stack(batch_aft_list, dim=0)
@@ -204,7 +204,7 @@ def custom_collate_fn(batch):
             file.write(f"  Combined Pre Batch data shape: {combined_pre.shape}\n")
             file.write(f"  Combined Aft Batch data shape: {combined_aft.shape}\n\n")
 
-            # 将 combined_pre 和 combined_aft 整合为一个 batch_data
+           
             batch_data = (combined_pre, combined_aft)
 
     # 增加批次索引计数器
@@ -367,7 +367,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_train = ConCatDatasetWithIndex(concat_datasets_train)
     sampler_train = ImprovedBatchSchedulerSampler(
         dataset=dataset_train,
-        batch_size=4,
+        batch_size=16,
         shuffle=True
     )
     sampler_train.set_epoch(0)
@@ -410,12 +410,12 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
 
                     elif isinstance(element, list):
                         debug_file.write(f"[DEBUG] Element {element_idx} is a list with length: {len(element)}\n")
-                        # 打印列表的前几个元素，避免输出过多
+                     
                         debug_file.write(f"[DEBUG] First 3 elements of list element {element_idx}: {element[:3]}\n")
 
                     elif isinstance(element, dict):
                         debug_file.write(f"[DEBUG] Element {element_idx} is a dict with keys: {element.keys()}\n")
-                        # 打印字典的前几个键值对
+                        
                         for key, value in list(element.items())[:3]:
                             debug_file.write(f"[DEBUG] Key: {key}, Value Type: {type(value)}\n")
                             if isinstance(value, torch.Tensor):
@@ -444,7 +444,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_val = ConCatDatasetWithIndex(concat_datasets_val)
     sampler_val = ImprovedBatchSchedulerSampler(
         dataset=dataset_val,
-        batch_size=4,
+        batch_size=16,
         shuffle=False
     )
     sampler_val.set_epoch(0)
@@ -467,7 +467,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_test = ConCatDatasetWithIndex(concat_datasets_test)
     sampler_test = ImprovedBatchSchedulerSampler(
         dataset=dataset_test,
-        batch_size=4,
+        batch_size=16,
         shuffle=False
     )
     sampler_test.set_epoch(0)
