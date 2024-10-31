@@ -52,40 +52,16 @@ class SetupCallback(Callback):
 
 
 class EpochEndCallback(Callback):
-    def __init__(self):
-        # 初始化 avg_train_loss 为 None
-        self.avg_train_loss = None
-
     def on_train_epoch_end(self, trainer, pl_module, outputs=None):
-        # 获取训练损失
-        avg_train_loss = trainer.callback_metrics.get('train_loss_epoch')
-        
-        # 将 avg_train_loss 设置为实例的属性
-        self.avg_train_loss = avg_train_loss
-        
-        print(f"[DEBUG] Train Epoch End - Avg Train Loss: {self.avg_train_loss}")
+        self.avg_train_loss = trainer.callback_metrics.get('train_loss')
 
     def on_validation_epoch_end(self, trainer, pl_module):
         lr = trainer.optimizers[0].param_groups[0]['lr']
-        avg_val_loss = trainer.callback_metrics.get('val_loss_epoch')
+        avg_val_loss = trainer.callback_metrics.get('val_loss')
 
-        # 在验证 epoch 结束时，打印相关信息
-        print(f"[DEBUG] Validation Epoch End - Learning Rate: {lr}")
-        print(f"[DEBUG] Validation Epoch End - Training Loss (self.avg_train_loss): {self.avg_train_loss}")
-        print(f"[DEBUG] Validation Epoch End - Validation Loss: {avg_val_loss}")
-
-        if lr is None:
-            print("[ERROR] Learning rate (lr) is None.")
-        if self.avg_train_loss is None:
-            print("[ERROR] Training loss (self.avg_train_loss) is None.")
-        if avg_val_loss is None:
-            print("[ERROR] Validation loss (avg_val_loss) is None.")
-
-        # 检查是否所有值都存在
-        if lr is not None and self.avg_train_loss is not None and avg_val_loss is not None:
+        if hasattr(self, 'avg_train_loss'):
             print_log(f"Epoch {trainer.current_epoch}: Lr: {lr:.7f} | Train Loss: {self.avg_train_loss:.7f} | Vali Loss: {avg_val_loss:.7f}")
-        else:
-            print_log(f"Epoch {trainer.current_epoch}: Missing values for logging.")
+
 
 
 

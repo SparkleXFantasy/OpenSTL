@@ -21,6 +21,6 @@ if __name__ == '__main__':
             config[attribute] = default_values[attribute]
     print('>'*35 + ' testing  ' + '<'*35)
     exp = BaseExperiment(args)
-    rank, _ = get_dist_info()
+    rank, _ = get_dist_info
 
     exp.test()

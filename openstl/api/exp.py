@@ -81,7 +81,7 @@ class BaseExperiment(object):
                 'sched': configs_copy[0].get('sched', 'cosine'),
                 'lr': configs_copy[0].get('lr', 1e-3),
                 'warmup_epoch': configs_copy[0].get('warmup_epoch', 0),
-                'epoch': configs_copy[0].get('epoch', 200),
+                'epoch': configs_copy[0].get('epoch', 3),
                 'steps_per_epoch': len(self.data.train_loader),
                 'test_mean': self.data.test_mean,
                 'test_std': self.data.test_std,
@@ -102,7 +102,7 @@ class BaseExperiment(object):
             
         else:
             
-            self.method = method_maps[self.args.method](
+            self.method = multi_method_maps[self.args.method](
                 steps_per_epoch=len(self.data.train_loader),
                 test_mean=self.data.test_mean,
                 test_std=self.data.test_std,
@@ -110,8 +110,8 @@ class BaseExperiment(object):
                 **self.config
             )
 
-        #callbacks, self.save_dir = self._load_callbacks(args, save_dir, ckpt_dir)
-        callbacks = []
+        callbacks, self.save_dir = self._load_callbacks(args, save_dir, ckpt_dir)
+        
         self.trainer = self._init_trainer(self.args, callbacks, strategy)
 
 
@@ -120,24 +120,28 @@ class BaseExperiment(object):
     def _init_trainer(self, args, callbacks, strategy):
         print(f"[DEBUG] Initializing Trainer: devices={args.gpus}, max_epochs={args.epoch}, strategy={strategy}, accelerator='gpu'")
         print(f"arg.epoch 的大小是{args.epoch}")
-        return Trainer(devices=[0, 1], 
+        return Trainer(devices=4, 
+                    num_nodes=1,
                     max_epochs=args.epoch,
                     strategy=DDPStrategy(find_unused_parameters=True),
                     accelerator='gpu',
-                    precision=16,
                     callbacks=callbacks,
                     num_sanity_val_steps=0,
-                    
+                    precision=32,
+                    gradient_clip_val=0.1,
                     #limit_train_batches=0.001,  
                     #limit_val_batches=0.001, 
-                    #log_every_n_steps=1,  
-                    enable_progress_bar=True, )
+                    limit_test_batches=0.2,
+                    log_every_n_steps=1,  
+                    detect_anomaly=True,
+                    gradient_clip_algorithm="norm",
+                    enable_progress_bar=True )
         
     def _load_callbacks(self, args, save_dir, ckpt_dir):
         method_info = None
         if self._dist == 0:
             if not self.args.no_display_method_info:
-                #  method_info = self.display_method_info(args)
+                #method_info = self.display_method_info(args)
                 method_info = None
         setup_callback = SetupCallback(
             prefix = 'train' if (not args.test) else 'test',
@@ -193,11 +197,10 @@ class BaseExperiment(object):
 
 
     def test(self):
+        #print(f"Testing with method: {self.method} ")
         if self.args.test == True:
             ckpt = torch.load(osp.join(self.save_dir, 'checkpoints', 'best.ckpt'))
             missing_keys, unexpected_keys = self.method.load_state_dict(ckpt['state_dict'], strict=True)
-            print(f'Missing keys: {missing_keys}')
-            print(f'Unexpected keys: {unexpected_keys}')
         self.trainer.test(self.method, self.data)
     
     def display_method_info(self, args):
@@ -207,7 +210,7 @@ class BaseExperiment(object):
             assign_gpu = 'cuda:' + (str(args.gpus[0]) if len(args.gpus) == 1 else '0')
             device = torch.device(assign_gpu)
         T, C, H, W = args.in_shape
-        if args.method in ['simvp', 'tau', 'mmvp', 'wast']:
+        if args.method in ['multisimvp', 'tau', 'mmvp', 'wast']:
             input_dummy = torch.ones(1, args.pre_seq_length, C, H, W).to(device)
         elif args.method == 'phydnet':
             _tmp_input1 = torch.ones(1, args.pre_seq_length, C, H, W).to(device)

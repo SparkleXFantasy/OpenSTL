@@ -21,20 +21,67 @@ def _threshold(x, y, t):
     p = np.where(is_nan, np.zeros_like(p, dtype=np.float32), p)
     return t, p
 
-def MAE(pred, true, spatial_norm=False):
-    if not spatial_norm:
-        return np.mean(np.abs(pred-true), axis=(0, 1)).sum()
-    else:
-        norm = pred.shape[-1] * pred.shape[-2] * pred.shape[-3]
-        return np.mean(np.abs(pred-true) / norm, axis=(0, 1)).sum()
+def MAE(pred, true, spatial_norm=False, batch_size=256):
+    # 初始化 MAE 和批次数
+    mae = 0.0
+    total_samples = pred.shape[0]
+    num_batches = total_samples // batch_size + (1 if total_samples % batch_size != 0 else 0)
 
+    for i in range(num_batches):
+        # 获取当前批次的预测值和真实值
+        batch_pred = pred[i * batch_size:(i + 1) * batch_size]
+        batch_true = true[i * batch_size:(i + 1) * batch_size]
+        
+        # 计算当前批次的 MAE
+        if not spatial_norm:
+            batch_mae = np.mean(np.abs(batch_pred - batch_true), axis=(0, 1)).sum()
+        else:
+            norm = batch_pred.shape[-1] * batch_pred.shape[-2] * batch_pred.shape[-3]
+            batch_mae = np.mean(np.abs(batch_pred - batch_true) / norm, axis=(0, 1)).sum()
 
-def MSE(pred, true, spatial_norm=False):
-    if not spatial_norm:
-        return np.mean((pred-true)**2, axis=(0, 1)).sum()
-    else:
-        norm = pred.shape[-1] * pred.shape[-2] * pred.shape[-3]
-        return np.mean((pred-true)**2 / norm, axis=(0, 1)).sum()
+        # 累加当前批次的 MAE
+        mae += batch_mae
+
+    # 计算最终的平均 MAE
+    mae /= num_batches
+    return mae
+# def MAE(pred, true, spatial_norm=False):
+#     if not spatial_norm:
+#         return np.mean(np.abs(pred-true), axis=(0, 1)).sum()
+#     else:
+#         norm = pred.shape[-1] * pred.shape[-2] * pred.shape[-3]
+#         return np.mean(np.abs(pred-true) / norm, axis=(0, 1)).sum()
+
+def MSE(pred, true, spatial_norm=False, batch_size=256):
+    # 初始化 MSE 和批次数
+    mse = 0.0
+    total_samples = pred.shape[0]
+    num_batches = total_samples // batch_size + (1 if total_samples % batch_size != 0 else 0)
+
+    for i in range(num_batches):
+        # 获取当前批次的预测值和真实值
+        batch_pred = pred[i * batch_size:(i + 1) * batch_size]
+        batch_true = true[i * batch_size:(i + 1) * batch_size]
+        
+        # 计算当前批次的 MSE
+        if not spatial_norm:
+            batch_mse = np.mean((batch_pred - batch_true) ** 2, axis=(0, 1)).sum()
+        else:
+            norm = batch_pred.shape[-1] * batch_pred.shape[-2] * batch_pred.shape[-3]
+            batch_mse = np.mean((batch_pred - batch_true) ** 2 / norm, axis=(0, 1)).sum()
+
+        # 累加当前批次的 MSE
+        mse += batch_mse
+
+    # 计算最终的平均 MSE
+    mse /= num_batches
+    return mse
+# def MSE(pred, true, spatial_norm=False):
+#     if not spatial_norm:
+#         return np.mean((pred-true)**2, axis=(0, 1)).sum()
+#     else:
+#         norm = pred.shape[-1] * pred.shape[-2] * pred.shape[-3]
+#         return np.mean((pred-true)**2 / norm, axis=(0, 1)).sum()
 
 
 def RMSE(pred, true, spatial_norm=False):
@@ -185,9 +232,12 @@ def metric(pred, true, mean=None, std=None, metrics=['mae', 'mse'],
     Returns:
         dict: evaluation results
     """
+    pred = pred.astype(np.float16)
+    true = true.astype(np.float16)
     if mean is not None and std is not None:
         pred = pred * std + mean
         true = true * std + mean
+
     eval_res = {}
     eval_log = ""
     allowed_metrics = ['mae', 'mse', 'rmse', 'ssim', 'psnr', 'snr', 'lpips', 'pod', 'sucr', 'csi']
@@ -246,11 +296,54 @@ def metric(pred, true, mean=None, std=None, metrics=['mae', 'mse'],
         ssim = 0
         for b in range(pred.shape[0]):
             for f in range(pred.shape[1]):
-                img_norm = pred[b, f].swapaxes(0, 2)
+                # 将 (C, H, W) 转换为 (H, W, C)
+                img_norm = pred[b, f].transpose(1, 2, 0)
+                true_img = true[b, f].transpose(1, 2, 0)
+
+                # 计算数据范围
                 data_range = img_norm.max() - img_norm.min()
-                ssim += cal_ssim(img_norm,
-                                 true[b, f].swapaxes(0, 2), multichannel=True, win_size=3, data_range=data_range)
+
+                # 打印调试信息以确认图像形状和数据范围
+                #print(f"Image shape: {img_norm.shape}, Win size: 3, Data range: {data_range}")
+
+                # 扩展双通道为三通道
+                if img_norm.shape[-1] == 2:
+                    img_norm = np.concatenate([img_norm, np.zeros((img_norm.shape[0], img_norm.shape[1], 1))], axis=-1)
+                    true_img = np.concatenate([true_img, np.zeros((true_img.shape[0], true_img.shape[1], 1))], axis=-1)
+                    #print(f"Extended image to three channels: {img_norm.shape}")
+
+                # 设置 multichannel 参数
+                if img_norm.shape[-1] == 1:
+                    multichannel = False  # 单通道灰度图像
+                else:
+                    multichannel = True   # 多通道图像
+
+                # 尝试计算 SSIM
+                try:
+                    ssim += cal_ssim(img_norm,
+                                    true_img, 
+                                    win_size=3, 
+                                    data_range=data_range, 
+                                    multichannel=multichannel)
+                except ValueError as e:
+                    print(f"Error calculating SSIM for image of size {img_norm.shape}: {e}")
+                    continue
+
         eval_res['ssim'] = ssim / (pred.shape[0] * pred.shape[1])
+
+
+
+    # if 'ssim' in metrics:
+    #     ssim = 0
+    #     for b in range(pred.shape[0]):
+    #         for f in range(pred.shape[1]):
+    #             img_norm = pred[b, f].transpose(0, 2)
+    #             data_range = img_norm.max() - img_norm.min()
+    #             #print(f"Image shape: {img_norm.shape}")
+
+    #             ssim += cal_ssim(img_norm,
+    #                              true[b, f].transpose(0, 2), multichannel=True, win_size=3, data_range=data_range)
+    #     eval_res['ssim'] = ssim / (pred.shape[0] * pred.shape[1])
 
     if 'psnr' in metrics:
         psnr = 0

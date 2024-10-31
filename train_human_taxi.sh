@@ -1,9 +1,13 @@
 #!/bin/bash
 #SBATCH -N 1
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:4
 #SBATCH -p vip_gpu_ailab
 #SBATCH -A ai4bio
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python /home/bingxing2/ailab/suencheng/encheng/code/OpenSTL/tools/train.py --datanames human taxibj --lr 1e-3 --configs configs_multi/human/SimVP.py configs_multi/taxibj/SimVP.py --ex_name taxi_human_simvp
+conda activate OpenSTL
+cd encheng/code/OpenSTL
+module load cudnn/8.2.1.32_cuda11.x
 
-sleep 360000
+module load cuda/11.7
+
+python tools/train.py --datanames human taxibj bair --lr 1e-4 --configs configs_multi/human/SimVP.py configs_multi/taxibj/SimVP.py configs_multi/bair/SimVP.py --ex_name simvp_taxi_human_bair

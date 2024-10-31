@@ -8,6 +8,7 @@ import copy
 from openstl.api import BaseExperiment
 from openstl.utils import (create_parser, default_parser, get_dist_info, load_config,
                            update_config)
+import torch
 
 # debugpy.listen(("0.0.0.0", 5678))
 # print("Waiting for debugger to attach...")
@@ -19,6 +20,7 @@ if __name__ == '__main__':
 
 
 
+    torch.set_float32_matmul_precision('medium')
 
     args = create_parser().parse_args()
     config = args.__dict__
@@ -55,17 +57,20 @@ if __name__ == '__main__':
    
     args.configs = configs
   
-
-    print('>' * 35 + ' training ' + '<' * 35)
-
-    
     exp = BaseExperiment(args, config=config)
     rank, _ = get_dist_info()
-    exp.train()
-
-    if rank == 0:
-        print('>' * 35 + ' testing  ' + '<' * 35)
+    if args.ckpt_path:
+        # 加载 checkpoint 并进行测试
+        print('>' * 35 + ' testing with checkpoint ' + '<' * 35)
+        ckpt = torch.load(args.ckpt_path)
+        exp.method.load_state_dict(ckpt['state_dict'], strict=True)
         mse = exp.test()
+    else:
+        # 否则，正常训练并测试
+        exp.train()
+        if rank == 0:
+            print('>' * 35 + ' testing  ' + '<' * 35)
+            mse = exp.test()
 
 
 
