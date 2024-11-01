@@ -166,7 +166,7 @@ def custom_collate_fn(batch):
         # 处理 batch 中每个元素
         for idx, item in enumerate(batch):
             
-            if isinstance(item, list) and len(item) == 16:
+            if isinstance(item, list) and len(item) == 1:
                 for sub_idx, sub_item in enumerate(item):
                     
                     if not isinstance(sub_item, tuple) or len(sub_item) != 2:
@@ -367,7 +367,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_train = ConCatDatasetWithIndex(concat_datasets_train)
     sampler_train = ImprovedBatchSchedulerSampler(
         dataset=dataset_train,
-        batch_size=16,
+        batch_size=1,
         shuffle=True
     )
     sampler_train.set_epoch(0)
@@ -406,7 +406,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
 
                     if isinstance(element, torch.Tensor):
                         debug_file.write(f"[DEBUG] Element {element_idx} is a tensor with shape: {element.shape}\n")
-                        debug_file.write(f"[DEBUG] First few values in tensor element {element_idx}: {element.flatten()[:16]}\n")
+                        debug_file.write(f"[DEBUG] First few values in tensor element {element_idx}: {element.flatten()[:1]}\n")
 
                     elif isinstance(element, list):
                         debug_file.write(f"[DEBUG] Element {element_idx} is a list with length: {len(element)}\n")
@@ -444,7 +444,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_val = ConCatDatasetWithIndex(concat_datasets_val)
     sampler_val = ImprovedBatchSchedulerSampler(
         dataset=dataset_val,
-        batch_size=16,
+        batch_size=1,
         shuffle=False
     )
     sampler_val.set_epoch(0)
@@ -467,7 +467,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_test = ConCatDatasetWithIndex(concat_datasets_test)
     sampler_test = ImprovedBatchSchedulerSampler(
         dataset=dataset_test,
-        batch_size=16,
+        batch_size=1,
         shuffle=False
     )
     sampler_test.set_epoch(0)

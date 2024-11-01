@@ -154,12 +154,10 @@ class Base_multi_method(l.LightningModule):
           
             pred_y = self(batch_x, dataset_idx)
 
-           
             if dataset_idx == 2:  
                 target_length = 12
             else:
                 target_length = 4
-
             
             loss = self.criterion(pred_y[:, :target_length], batch_y)
 

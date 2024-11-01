@@ -11,10 +11,11 @@ from .predrnnv2_model import PredRNNv2_Model
 from .simvp_model import SimVP_Model, Multi_SimVP_Model
 from .mmvp_model import MMVP_Model
 from .swinlstm_model import SwinLSTM_D_Model, SwinLSTM_B_Model
+from .earthformer_model import MultiEarthFormer_Model
 
 __all__ = [
     'ConvLSTM_Model', 'E3DLSTM_Model', 'MAU_Model', 'MIM_Model', 'PhyDNet_Model',
     'PredRNN_Model', 'PredRNNpp_Model', 'PredRNNv2_Model', 'SimVP_Model',
     "MMVP_Model", 'SwinLSTM_D_Model', 'SwinLSTM_B_Model',
-    'Multi_SimVP_Model'
+    'Multi_SimVP_Model', 'MultiEarthFormer_Model'
 ]

@@ -13,6 +13,7 @@ from .tau import TAU
 from .mmvp import MMVP
 from .swinlstm import SwinLSTM_D, SwinLSTM_B
 from .wast import WaST
+from .earthformer import MultiEarthFormer
 
 method_maps = {
     'convlstm': ConvLSTM,
@@ -31,8 +32,10 @@ method_maps = {
     'swinlstm': SwinLSTM_B,
     'wast': WaST
 }
+
 multi_method_maps = {
-    'multisimvp': MultiSimVP
+    'multisimvp': MultiSimVP,
+    'multiearthformer': MultiEarthFormer,
 }
 
 __all__ = [

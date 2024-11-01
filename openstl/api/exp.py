@@ -26,7 +26,7 @@ class BaseExperiment(object):
         
 
         self.method = None
-        self.args.method = 'multisimvp'
+        self.args.method = 'multiearthformer'
         
         self._dist = self.args.dist
         base_dir = args.res_dir if args.res_dir is not None else 'work_dirs'
@@ -63,7 +63,7 @@ class BaseExperiment(object):
                 for k in [
                     'spatio_kernel_enc', 'spatio_kernel_dec', 'hid_S', 'hid_T',
                     'N_T', 'N_S', 'in_shape', 'pre_seq_length', 'aft_seq_length',
-                    'total_length'
+                    'total_length', 'initial_shape', 'input_shape'
                 ]:
                     if k in config:
                         enc_dec_config[k] = config[k]

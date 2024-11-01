@@ -1,0 +1,1 @@
+python tools/train.py --configs configs_multi/human/SimVP.py configs_multi/taxibj/SimVP.py configs_multi/bair/SimVP.py --datanames human taxibj bair --ckpt_path /home/bingxing2/ailab/suencheng/encheng/code/OpenSTL/work_dirs/simvp_taxi_human_bair/checkpoints/best.ckpt

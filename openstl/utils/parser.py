@@ -25,8 +25,8 @@ def create_parser():
                         help='whether to set deterministic options for CUDNN backend (reproducable)')
 
     # dataset parameters
-    parser.add_argument('--batch_size', '-b', default=16, type=int, help='Training batch size')
-    parser.add_argument('--val_batch_size', '-vb', default=16, type=int, help='Validation batch size')
+    parser.add_argument('--batch_size', '-b', default=1, type=int, help='Training batch size')
+    parser.add_argument('--val_batch_size', '-vb', default=1, type=int, help='Validation batch size')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--data_root', default='./data')
     parser.add_argument('--dataname', '-d', default='', type=str,
@@ -55,7 +55,7 @@ def create_parser():
                         choices=['ConvLSTM', 'convlstm', 'E3DLSTM', 'e3dlstm', 'MAU', 'mau', 'MIM', 'mim', 
                                 'PhyDNet', 'phydnet', 'PredRNN', 'predrnn', 'PredRNNpp',  'predrnnpp', 
                                 'PredRNNv2', 'predrnnv2', 'SimVP', 'simvp', 'TAU', 'tau', 'MMVP', 'mmvp', 
-                                'SwinLSTM', 'swinlstm', 'swinlstm_d', 'swinlstm_b'],
+                                'SwinLSTM', 'swinlstm', 'swinlstm_d', 'swinlstm_b', 'multiearthformer'],
                         help='Name of video prediction method to train (default: "SimVP")')
     parser.add_argument('--config_file', '-c', default=None, type=str,
                         help='Path to the default config file')
@@ -128,8 +128,8 @@ def default_parser():
         'test': False,
         'deterministic': False,
         # dataset parameters
-        'batch_size': 16,
-        'val_batch_size': 16,
+        'batch_size': 1,
+        'val_batch_size': 1,
         'num_workers': 4,
         'data_root': './data',
         'datanames': '',
@@ -140,7 +140,7 @@ def default_parser():
         'use_prefetcher': False,
         'drop_last': False,
         # method parameters
-        'method': 'MultiSimVP',
+        'method': 'multiearthformer',
         'config_file': None,
         'model_type': 'gSTA',
         'drop': 0,
