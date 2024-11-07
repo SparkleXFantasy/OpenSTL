@@ -1,4 +1,4 @@
-method = 'MultiSimVP'
+method = 'multiearthformer'
 # model
 spatio_kernel_enc = 3
 spatio_kernel_dec = 3
@@ -14,8 +14,9 @@ drop_path = 0.1
 sched = 'cosine'
 warmup_epoch = 0
 initial_shape = [4, 32, 32, 2]
-input_shape = [4, 32, 32, 2]    # backbone shape
-in_shape = [4, 2, 32, 32]
+in_shape = [4, 3, 32, 32]
+input_shape = [4, 32, 32, 3]    # backbone shape
+
 pre_seq_length = 4
 aft_seq_length = 4
 total_length = 8

@@ -1,4 +1,4 @@
-method = 'MultiEarthformer'
+method = 'multiearthformer'
 # model
 spatio_kernel_enc = 3
 spatio_kernel_dec = 3

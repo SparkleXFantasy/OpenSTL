@@ -6816,3 +6816,1951 @@ Using decoder for data class 2: Decoder(
   )
   (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
 )
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 256, 256])
+Using encoder for data class 0: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (2): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (3): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 0: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (2): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (3): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 2, 32, 32])
+Using encoder for data class 1: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(2, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 1: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 32, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 256, 256])
+Using encoder for data class 0: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (2): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (3): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 0: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (2): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (3): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)
+Batch type: <class 'torch.Tensor'>, shape: torch.Size([16, 4, 3, 64, 64])
+Using encoder for data class 2: Encoder(
+  (enc): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+)
+Using decoder for data class 2: Decoder(
+  (dec): Sequential(
+    (0): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): PixelShuffle(upscale_factor=2)
+        )
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+    (1): ConvSC(
+      (conv): BasicConv2d(
+        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (norm): GroupNorm(2, 64, eps=1e-05, affine=True)
+        (act): SiLU()
+      )
+    )
+  )
+  (readout): Conv2d(64, 3, kernel_size=(1, 1), stride=(1, 1))
+)

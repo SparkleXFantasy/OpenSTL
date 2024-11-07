@@ -1918,3 +1918,2715 @@ Tensor 2 Shape: torch.Size([12, 3, 64, 64])
 Dataset Index: 2, Sample Index: 17106
 Tensor 1 Shape: torch.Size([4, 3, 64, 64])
 Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 61012
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 37606
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 19421
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 34688
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 20663
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 585
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 64138
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 62693
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 66699
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 18210
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 35685
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 15407
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 60798
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39280
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 68613
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 50686
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 10354
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 4453
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 20467
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 68332
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 12717
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 18887
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 43292
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 43620
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 22663
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 48034
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 31324
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 67361
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 25872
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 61442
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 55925
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 61961
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 12314
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 14389
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 2794
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 17610
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 31468
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39049
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 18550
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 48230
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 4752
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 19606
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 27837
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 29952
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 8366
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 68581
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 31918
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 67616
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 65472
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 8510
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11080
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13561
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13382
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 3407
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15330
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10463
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19072
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8638
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1476
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15566
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15199
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19680
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11876
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7409
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9159
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15982
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12501
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 2146
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15318
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13485
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4702
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10746
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4589
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 245
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14679
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7876
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 926
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16357
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6736
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14003
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 3786
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 59603
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 7903
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 73095
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 2492
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 21020
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 41888
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 63987
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 57630
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 27943
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 28182
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 1676
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 16388
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 31427
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 54380
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 49013
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 28162
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 3004
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 44997
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 49258
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 8415
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 32800
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 14921
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 63254
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 30482
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 34574
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 10975
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 42093
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 45448
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 52503
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 26247
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 34731
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 36422
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 34388
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 177
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 24937
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 14534
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 73325
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 2008
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 68013
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 25976
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 13960
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31382
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 16199
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 184
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 6627
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 1165
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 36935
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 61512
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 4512
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 19436
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 23033
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 51143
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 7385
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 12432
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 53922
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 20758
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21163
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 49535
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 29239
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 12839
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 48719
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 4477
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 69046
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 28350
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 64893
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 40899
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 7006
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 5372
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 10068
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33135
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 1743
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 29171
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 8234
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5234
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18402
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17500
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28156
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15498
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33394
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20187
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33578
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12309
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11066
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 32159
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19240
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5628
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 30418
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 33573
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 55014
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 34419
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 21468
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 2028
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 41465
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 38827
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 37073
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 47517
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 18841
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 48068
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 52536
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 2666
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 58139
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 12054
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 55305
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 27405
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 33865
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 805
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 22349
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 3003
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 8832
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7192
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28729
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 17353
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1370
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5097
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20323
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17005
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7816
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12768
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1894
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 18524
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17436
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14049
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12948
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14515
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20083
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16171
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19999
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12969
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10811
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20319
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5375
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19806
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4260
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10344
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11736
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15716
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9112
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15523
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 3014
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8750
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14666
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14336
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7054
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20393
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15112
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6578
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14320
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5712
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5314
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4174
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14377
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7569
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9728
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5388
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20334
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13923
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19766
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12874
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19518
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 801
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 34245
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14633
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 461
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22588
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 914
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31800
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31404
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12040
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 23708
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28184
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7526
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19820
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 16239
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22725
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7069
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 6361
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1426
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11552
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11879
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14952
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 623
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20386
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15262
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7910
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17149
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16836
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1290
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13117
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 2774
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17444
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1752
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 33356
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 28269
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 9346
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 3586
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 61235
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 24082
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 6172
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 20075
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 58169
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 69478
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 37977
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 22058
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 7260
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 33208
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 33146
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 9732
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 14958
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 42009
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 2794
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 52054
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 38018
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 3719
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 3665
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 60188
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 16348
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19651
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 24470
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 26486
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7500
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33483
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21000
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 13205
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22894
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17782
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 2124
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14690
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27881
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5098
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7323
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18169
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14218
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22737
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 2795
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27614
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 1692
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11978
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11960
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17106
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 4497
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 24760
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19013
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21429
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5457
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 16493
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11525
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27402
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12631
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 2682
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 13856
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5489
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28653
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27157
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 6119
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12522
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 26795
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15236
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18351
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20387
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33398
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14169
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17537
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15812
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 9181
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31120
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15280
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 30098
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 23015
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11324
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15343
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 9317
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15274
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22942
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 26403
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 8475
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 278
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12944
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15426
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 26600
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 32661
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33546
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14393
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15518
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 32256
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 4195
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27682
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 34110
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 61027
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 18359
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 40434
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 32027
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 19364
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 59363
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 4008
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 67879
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 49871
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 61707
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 62832
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 73187
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 1306
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 1201
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 30920
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 12109
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 19372
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19239
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14294
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 18638
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 456
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 2595
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19002
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 2173
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16742
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14750
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19137
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11248
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19332
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16896
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17607
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15897
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 35315
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39963
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 67804
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 42929
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 59889
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 54821
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 68820
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 64752
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 4560
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 11045
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 15082
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 1200
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 22700
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 46454
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 67657
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 21960
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 72
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 85
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 26120
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28953
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14112
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12916
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 13192
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 18122
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 819
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14335
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10402
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 2627
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6448
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13561
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10204
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4278
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 927
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 278
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8334
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8368
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15734
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6026
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6877
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 182
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 4368
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16328
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14622
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19571
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 18055
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 419
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14749
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14478
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5813
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17713
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10530
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10881
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1260
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4447
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 266
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19509
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1003
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12316
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7916
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12178
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15338
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19058
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14979
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11541
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20304
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 765
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4588
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8338
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6098
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13921
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8475
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9132
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 6966
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 9731
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 152
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15574
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21415
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18445
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5522
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21505
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 9178
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 25805
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12343
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 10748
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 13431
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 8979
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17268
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 30829
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31432
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 32766
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33518
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28652
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20549
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 3983
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 32599
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 10442
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 10384
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 37702
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 58661
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 6219
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 71640
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 6158
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 60371
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 16523
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 22818
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 29813
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 22676
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39178
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 33194
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 70242
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 59082
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 32672
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 12969
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10811
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20319
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5375
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19806
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4260
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10344
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11736
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15716
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9112
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15523
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 3014
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8750
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14666
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14336
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7054
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20393
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15112
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6578
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14320
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5712
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5314
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4174
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14377
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7569
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9728
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5388
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20334
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13923
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19766
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12874
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19518
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17353
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1370
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5097
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20323
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17005
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7816
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12768
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1894
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 18524
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17436
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14049
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12948
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14515
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20083
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16171
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19999
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 801
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 34245
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14633
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 461
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22588
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 914
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31800
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 31404
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 12040
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 23708
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 28184
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7526
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19820
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 16239
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22725
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7069
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 6361
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1426
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 33356
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 11552
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11879
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14952
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 623
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 20386
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15262
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7910
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17149
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16836
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1290
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13117
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 2774
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17444
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1752
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 28269
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 9346
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 61235
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 6172
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 3586
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 58169
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 24082
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20075
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 69478
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 37977
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 7260
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 33146
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 33208
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22058
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 14958
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 42009
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 9732
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 52054
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 38018
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 2794
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 3665
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 3719
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 60188
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 16348
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19651
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 24470
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 26486
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7500
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21000
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33483
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 13205
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22894
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17782
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 2124
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14690
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27881
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5098
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7323
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18169
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22737
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 2795
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14218
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27614
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 1692
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11960
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 11978
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17106
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 9056
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 34220
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 4720
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 15999
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 68670
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 54603
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 5940
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 11789
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 18606
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 79
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 23413
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 5347
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 11939
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 15575
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 48715
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 2589
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 763
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10756
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 49465
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 28363
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 1402
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 10325
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 51368
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 14889
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 13063
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 8506
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14860
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 60028
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 8130
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 4590
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 26189
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 13246
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15899
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 5211
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 17292
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 29291
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 6001
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 44646
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39763
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 1019
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 21759
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 2946
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 3519
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 47116
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 33368
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 19807
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 26189
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 5211
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 15899
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 13246
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 13229
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 4345
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 9603
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 1907
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 24172
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 2839
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 4368
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 9473
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 5422
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14455
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21849
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 3175
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 1766
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 23026
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 31128
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 26189
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15899
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 13246
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 5211
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17186
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 4893
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 5921
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 9893
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 49922
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 2418
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 69262
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 32199
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 86
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 11514
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 7563
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 21007
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 26189
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 13246
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15899
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 5211
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 34927
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 1080
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 64242
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15777
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 18022
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 5476
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 55599
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 6047
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 8326
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 72845
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 4177
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22039
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 27222
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 7398
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 35123
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 26189
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15899
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 13246
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 5211
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 6062
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14822
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 10759
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 48718
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 6277
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 54928
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 1939
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 33656
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 4981
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 14300
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 73302
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 25366
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 7791
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11072
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 15812
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 8900
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 17482
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10957
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 7620
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 24016
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 11715
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12382
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 40809
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 2226
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 5973
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13015
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 36240
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 34530
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 17453
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10848
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 23681
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 47920
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15814
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9928
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16482
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 6233
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4500
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4300
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 47410
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 1692
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 10917
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13050
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 17928
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18700
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 19276
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4722
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 28305
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20467
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 61235
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 70451
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39348
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 1906
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 24244
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 19146
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20140
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 33680
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 17538
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 7742
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 2940
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 21565
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 19408
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12184
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10068
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13074
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 7324
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 3921
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 12745
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10091
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 14119
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 15026
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27898
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 27604
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 13692
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 19890
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11866
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 18153
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 18275
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 24310
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 3024
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13146
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 17009
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 6461
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 27252
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 11763
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10022
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 477
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 14462
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 8927
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 26189
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 13246
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 15899
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 5211
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 6062
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 48718
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 14822
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 10759
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 6277
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 1939
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 54928
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 33656
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 14300
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 73302
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 4981
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 25366
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 7791
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 11072
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 15812
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 8900
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 17482
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 24016
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 10957
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 7620
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 11715
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 2226
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 40809
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 12382
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13015
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 5973
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 36240
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 34530
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 17453
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 10848
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 23681
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 47920
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 1, Sample Index: 6233
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 16482
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 9928
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 15814
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4500
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4300
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 47410
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 1692
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 10917
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 13050
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 17928
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 18700
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 19276
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 1, Sample Index: 4722
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 2, Sample Index: 28305
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 20467
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 0, Sample Index: 61235
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 70451
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 39348
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 1906
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 14980
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 13807
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 34064
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 14777
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 4458
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 58043
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 0, Sample Index: 48610
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 33554
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 5016
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 12064
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 23138
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 22667
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 1, Sample Index: 8065
+Tensor 1 Shape: torch.Size([4, 2, 32, 32])
+Tensor 2 Shape: torch.Size([4, 2, 32, 32])
+Dataset Index: 0, Sample Index: 59195
+Tensor 1 Shape: torch.Size([4, 3, 256, 256])
+Tensor 2 Shape: torch.Size([4, 3, 256, 256])
+Dataset Index: 2, Sample Index: 32918
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])
+Dataset Index: 2, Sample Index: 6526
+Tensor 1 Shape: torch.Size([4, 3, 64, 64])
+Tensor 2 Shape: torch.Size([12, 3, 64, 64])

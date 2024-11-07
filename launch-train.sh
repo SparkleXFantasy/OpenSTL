@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=0,1,2,3 python tools/train.py \
+CUDA_VISIBLE_DEVICES=4,5,6,7 python tools/train.py \
  --datanames human taxibj bair \
  -c configs_multi/human/earthformer.py\
  --lr 1e-4 \

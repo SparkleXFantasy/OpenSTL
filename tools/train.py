@@ -56,7 +56,6 @@ if __name__ == '__main__':
 
    
     args.configs = configs
-  
     exp = BaseExperiment(args, config=config)
     rank, _ = get_dist_info()
     if args.ckpt_path:

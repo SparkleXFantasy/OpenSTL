@@ -19,15 +19,11 @@ class BaseExperiment(object):
     
     def __init__(self, args, dataloaders=None, strategy='auto', config=None):
         """Initialize experiments (non-dist as an example)"""
-
         self.args = args
         
         self.config = config
-        
-
         self.method = None
         self.args.method = 'multiearthformer'
-        
         self._dist = self.args.dist
         base_dir = args.res_dir if args.res_dir is not None else 'work_dirs'
         save_dir = osp.join(base_dir, args.ex_name if not args.ex_name.startswith(args.res_dir)
@@ -91,7 +87,7 @@ class BaseExperiment(object):
 
             # 合并全局配置
             final_config = {**self.config, **common_args}
-
+            
             # 3. 初始化 self.method
             self.method = multi_method_maps[self.args.method](
                 enc_dec_configs=enc_dec_configs,

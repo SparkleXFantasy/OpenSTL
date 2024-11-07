@@ -2,7 +2,7 @@ import torch
 from torch import nn
 
 from openstl.modules import CuboidTransformerModel
-
+from einops import rearrange
 
 class EarthFormerConfig:
     def __init__(self, initial_shapes, input_shape, initial_downsample_scales):
@@ -142,7 +142,7 @@ class MultiEarthFormer_Model(nn.Module):
             assert(enc_dec_config['input_shape'] == input_shape)
             initial_shape = enc_dec_config['initial_shape']
             initial_shapes.append(initial_shape)
-            initial_downsample_scales.append([initial_shape[0] // input_shape[0], initial_shape[1] // input_shape[1], initial_shapes[2] // input_shape[2]])
+            initial_downsample_scales.append([initial_shape[0] // input_shape[0], initial_shape[1] // input_shape[1], initial_shape[2] // input_shape[2]])
             
         self.config = EarthFormerConfig(initial_shapes=initial_shapes, input_shape=input_shape, initial_downsample_scales=initial_downsample_scales)
         self.model = CuboidTransformerModel(**self.config.model_kwargs)
@@ -152,5 +152,7 @@ class MultiEarthFormer_Model(nn.Module):
             B, T, C, H, W = x_raw.shape
         except ValueError:
             raise ValueError(f"Unexpected input shape: {x_raw.shape}, expected (B, T, C, H, W)")
-        out = self.model(x=x_raw, data_cls_idx=data_cls_idx)
+        x = rearrange(x_raw, 'b t c h w -> b t h w c')
+        out = self.model(x=x, data_cls_idx=data_cls_idx)
+        out = rearrange(out, 'b t h w c -> b t c h w')
         return out
