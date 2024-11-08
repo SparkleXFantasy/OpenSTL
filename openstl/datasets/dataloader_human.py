@@ -110,7 +110,7 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
               pre_seq_length=4, aft_seq_length=4, in_shape=[4, 3, 256, 256],
               distributed=False, use_augment=False, use_prefetcher=False, drop_last=False):
 
-    data_root = os.path.join(data_root, 'human')
+    data_root = '/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/data/human'
     image_size = in_shape[-1] if in_shape is not None else 256
     train_set = HumanDataset(data_root, os.path.join(data_root, 'train.txt'), image_size,
                              pre_seq_length=pre_seq_length, aft_seq_length=aft_seq_length,
@@ -138,7 +138,7 @@ def load_dataset(batch_size, val_batch_size, data_root, num_workers=4,
               pre_seq_length=4, aft_seq_length=4, in_shape=[4, 3, 256, 256],
               distributed=False, use_augment=False, use_prefetcher=False, drop_last=False):
 
-    data_root = os.path.join(data_root, 'human')
+    data_root = '/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/data/human'
     image_size = in_shape[-1] if in_shape is not None else 256
     train_set = HumanDataset(data_root, os.path.join(data_root, 'train.txt'), image_size,
                              pre_seq_length=pre_seq_length, aft_seq_length=aft_seq_length,
@@ -155,7 +155,7 @@ if __name__ == '__main__':
     dataloader_train, _, dataloader_test = \
         load_data(batch_size=16,
                   val_batch_size=4,
-                  data_root='../../data/',
+                  data_root='/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/data/',
                   num_workers=4,
                   pre_seq_length=4, aft_seq_length=4,
                   use_prefetcher=True, distributed=True)

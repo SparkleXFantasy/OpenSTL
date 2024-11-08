@@ -135,11 +135,12 @@ class MultiEarthFormer_Model(nn.Module):
     def __init__(self, enc_dec_configs, **kwargs):
         super(MultiEarthFormer_Model, self).__init__()
         self.enc_dec_configs = enc_dec_configs
+        #self.input_shape = input_shape
         initial_shapes = []
         initial_downsample_scales = []
         input_shape = enc_dec_configs[0]['input_shape']
         for enc_dec_config in enc_dec_configs:
-            assert(enc_dec_config['input_shape'] == input_shape)
+            #assert(enc_dec_config['input_shape'] == input_shape)
             initial_shape = enc_dec_config['initial_shape']
             initial_shapes.append(initial_shape)
             initial_downsample_scales.append([initial_shape[0] // input_shape[0], initial_shape[1] // input_shape[1], initial_shape[2] // input_shape[2]])

@@ -6,12 +6,31 @@ dataset_parameters = {
     #     'total_length': 16,
     #     'metrics': ['mse', 'mae', 'ssim', 'psnr', 'lpips'],
     # },
+
+    'city':{
+        'in_shape': [2, 3, 128, 128],
+        'pre_seq_length': 2,
+        'aft_seq_length': 5,
+        'total_length': 7,
+        'metrics': ['mse', 'mae', 'ssim', 'psnr'],
+
+    },
+    'sevir':{
+
+
+        'in_shape': [4, 3, 256, 256],
+        'pre_seq_length': 4,
+        'aft_seq_length': 4,
+        'total_length': 8,
+        'metrics': ['mse', 'mae', 'ssim', 'psnr'],
+    },
+
     'bair': {
         'in_shape': [4, 3, 64, 64],
         'pre_seq_length': 4,
         'aft_seq_length': 12,
         'total_length': 16,
-        'metrics': ['mse', 'mae', 'ssim'],
+        'metrics': ['mse', 'mae', 'ssim', 'psnr'],
     },
     'mfmnist': {
         'in_shape': [10, 1, 64, 64],
