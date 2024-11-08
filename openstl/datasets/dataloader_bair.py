@@ -228,7 +228,7 @@ def load_data(batch_size, val_batch_size, data_root, num_workers=4,
     img_height = in_shape[-2] if in_shape is not None else 64
     img_width = in_shape[-1] if in_shape is not None else 64
     input_param = {
-        'data_path': os.path.join(data_root, 'bair'),
+        'data_path': '/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/data/bair',
         'image_height': img_height,
         'image_width': img_width,
         'minibatch_size': batch_size,
@@ -282,7 +282,7 @@ def load_dataset(batch_size, val_batch_size, data_root, num_workers=4,
     img_height = in_shape[-2] if in_shape is not None else 64
     img_width = in_shape[-1] if in_shape is not None else 64
     input_param = {
-        'data_path': os.path.join(data_root, 'bair'),
+        'data_path': '/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/data/bair',
         'image_height': img_height,
         'image_width': img_width,
         'minibatch_size': batch_size,
@@ -313,7 +313,7 @@ if __name__ == '__main__':
     dataloader_train, _, dataloader_test = \
         load_data(batch_size=16,
                   val_batch_size=4,
-                  data_root='../../data/',
+                  data_root='/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/data/',
                   num_workers=4,
                   pre_seq_length=4, aft_seq_length=12)
 

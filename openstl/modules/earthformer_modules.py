@@ -2525,6 +2525,8 @@ class CuboidTransformerEncoder(nn.Module):
             Optional
         """
         B, T, H, W, C_in = x.shape
+        print(f"x.shape 是{x.shape}")
+        print(f"inputshape 是{self.input_shape}")
         assert (T, H, W, C_in) == self.input_shape
 
         if self.use_global_vector:

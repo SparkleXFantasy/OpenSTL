@@ -155,7 +155,7 @@ class Base_multi_method(l.LightningModule):
             pred_y = self(batch_x, dataset_idx)
 
             if dataset_idx == 2:  
-                target_length = 12
+                target_length = 5
             else:
                 target_length = 4
             
@@ -177,7 +177,7 @@ class Base_multi_method(l.LightningModule):
         pred_y = self(batch_x, dataset_idx)
 
         if dataset_idx == 2:  
-            loss = self.criterion(pred_y[:, :12], batch_y) 
+            loss = self.criterion(pred_y[:, :5], batch_y) 
         else:
             
             loss = self.criterion(pred_y[:, :4], batch_y)  

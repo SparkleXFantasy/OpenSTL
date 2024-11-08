@@ -24,6 +24,9 @@ def load_data(dataname, batch_size, val_batch_size, num_workers, data_root, dist
     if dataname == 'bair':
         from .dataloader_bair import load_data
         return load_data(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
+    elif dataname == 'city':
+        from .dataloader_city import load_data
+        return load_data(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
     elif dataname == 'human':
         from .dataloader_human import load_data
         return load_data(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
@@ -65,64 +68,7 @@ def load_data(dataname, batch_size, val_batch_size, num_workers, data_root, dist
         raise ValueError(f'Dataname {dataname} is unsupported')
     
     
-def load_concat_data(datanames, batch_size, val_batch_size, num_workers, data_root, dist=False, **kwargs):
-    cfg_dataloader = dict(
-        pre_seq_length=kwargs.get('pre_seq_length', 10),
-        aft_seq_length=kwargs.get('aft_seq_length', 10),
-        in_shape=kwargs.get('in_shape', None),
-        distributed=dist,
-        use_augment=kwargs.get('use_augment', False),
-        use_prefetcher=kwargs.get('use_prefetcher', False),
-        drop_last=kwargs.get('drop_last', False),
-    )
-    concat_datasets_train = []
-    concat_datasets_val = []
-    concat_datasets_test = []
-    
-    for dataname in datanames:
-        if dataname == 'bair':
-            from .dataloader_bair import load_dataset
-            dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
-            concat_datasets_train.append(dataset_train)
-            concat_datasets_val.append(dataset_val)
-            concat_datasets_test.append(dataset_test)
-        elif dataname == 'human':
-            from .dataloader_human import load_dataset
-            dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
-            concat_datasets_train.append(dataset_train)
-            concat_datasets_val.append(dataset_val)
-            concat_datasets_test.append(dataset_test)
 
-        elif dataname == 'taxibj':
-            from .dataloader_taxibj import load_dataset
-            dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
-            concat_datasets_train.append(dataset_train)
-            concat_datasets_val.append(dataset_val)
-            concat_datasets_test.append(dataset_test)
-
-        else:
-            raise ValueError(f'Dataname {dataname} is unsupported')
-    
-    dataloader_train = create_loader(ConcatDataset(concat_datasets_train),
-                                     batch_size=batch_size,
-                                     shuffle=False, 
-                                     is_training=True,
-                                     pin_memory=True, drop_last=True,
-                                     num_workers=num_workers,
-                                     distributed=False, use_prefetcher=False)
-    dataloader_vali = create_loader(ConcatDataset(concat_datasets_val),
-                                    batch_size=val_batch_size,
-                                    shuffle=False, is_training=False,
-                                    pin_memory=True, drop_last=False,
-                                    num_workers=num_workers,
-                                    distributed=False, use_prefetcher=False)
-    dataloader_test = create_loader(ConcatDataset(concat_datasets_test),
-                                    batch_size=val_batch_size,
-                                    shuffle=False, is_training=False,
-                                    pin_memory=True, drop_last=False,
-                                    num_workers=num_workers,
-                                    distributed=False, use_prefetcher=False)
-    return dataloader_train, dataloader_vali, dataloader_test
 
 def save_batches_to_file(dataloader, filename='batch_details.txt'):
     with open(filename, 'w') as f:
@@ -139,19 +85,7 @@ def save_batches_to_file(dataloader, filename='batch_details.txt'):
 
 
 def custom_collate_fn(batch):
-    """
-    自定义 collate 函数，将 batch 解包成 (dataset_idx, combined_pre, combined_aft) 的格式。
-    
-    Args:
-        batch (list): 一个包含多个元素的列表，每个元素是 (dataset_idx, tensor) 或一个列表，包含这样的元组，
-                      其中 dataset_idx 表示数据集的索引，tensor 表示图像数据。
 
-    Returns:
-        tuple: (dataset_idx, combined_pre, combined_aft)，
-               dataset_idx 是一个整数，表示该批次的所有数据来自的相同数据集，
-               combined_pre 和 combined_aft 分别是包含所有 pre 和 aft 张量的合并张量，
-               维度为 [batch_size, time_steps, channels, height, width]。
-    """
     global batch_counter
 
     # 打开文件用于保存输出信息
@@ -166,7 +100,7 @@ def custom_collate_fn(batch):
         # 处理 batch 中每个元素
         for idx, item in enumerate(batch):
             
-            if isinstance(item, list) and len(item) == 1:
+            if isinstance(item, list) and len(item) == 2:
                 for sub_idx, sub_item in enumerate(item):
                     
                     if not isinstance(sub_item, tuple) or len(sub_item) != 2:
@@ -214,94 +148,6 @@ def custom_collate_fn(batch):
     return dataset_idx, batch_data
 
 
-# def custom_collate_fn(batch):
-#     """
-#     自定义 collate 函数，将 batch 解包成 (dataset_idx, batch_data) 的格式。
-    
-#     Args:
-#         batch (list): 一个包含多个元素的列表，每个元素是 (dataset_idx, tensor) 或一个列表，包含这样的元组，
-#                       其中 dataset_idx 表示数据集的索引，tensor 表示图像数据。
-
-#     Returns:
-#         tuple: (dataset_idx, batch_data)，
-#                dataset_idx 是一个整数，表示该批次的所有数据来自的相同数据集，
-#                batch_data 是一个包含所有样本的张量，维度为 [batch_size, time_steps, channels, height, width]。
-#     """
-#     global batch_counter
-
-#         # 打开文件用于保存输出信息
-#     with open(f'batch_structure_log.txt', 'a') as file:
-#         # 记录当前 batch 的索引
-#         file.write(f"Batch {batch_counter}:\n")
-
-#         batch_data_list = []
-
-#         # 处理 batch 中每个元素
-#         for idx, item in enumerate(batch):
-#             # 如果 item 是一个列表并且长度为 4
-            
-#             if isinstance(item, list) and len(item) == 4:
-#                 for sub_idx, sub_item in enumerate(item):
-#                     # 检查 sub_item 是否是元组，并且长度为 2
-#                     if not isinstance(sub_item, tuple) or len(sub_item) != 2:
-#                         file.write(f"Sub-element {sub_idx} in Sample {idx} is not valid. Type: {type(sub_item)}, Value: {sub_item}\n")
-#                         print(f"Sub-element {sub_idx} in Sample {idx} is not valid. Type: {type(sub_item)}")
-#                     else:
-#                         dataset_idx, data = sub_item
-#                         if not isinstance(dataset_idx, int):
-#                             file.write(f"Sub-element {sub_idx} in Sample {idx} has invalid `dataset_idx` type: {type(dataset_idx)}, value: {dataset_idx}\n")
-#                             print(f"Sub-element {sub_idx} in Sample {idx} has invalid `dataset_idx` type: {type(dataset_idx)}")
-#                         # 检查 data 是否为 (tensor1, tensor2) 的元组
-#                         if isinstance(data, tuple) and len(data) == 2:
-#                             tensor1, tensor2 = data
-#                             if isinstance(tensor1, torch.Tensor) and isinstance(tensor2, torch.Tensor):
-#                                 file.write(f"  Sample {idx}, Sub-sample {sub_idx} contains two tensors:\n")
-#                                 file.write(f"    Tensor 1 shape: {tensor1.shape}\n")
-#                                 file.write(f"    Tensor 2 shape: {tensor2.shape}\n")
-#                                # print(f"  Sample {idx}, Sub-sample {sub_idx} contains two tensors:")
-#                                 #print(f"    Tensor 1 shape: {tensor1.shape}")
-#                                # print(f"    Tensor 2 shape: {tensor2.shape}")
-#                                 # 将每个张量添加到 batch_data_list 中
-#                                 batch_data_list.extend([tensor1, tensor2])
-#                             else:
-#                                 file.write(f"  Sample {idx}, Sub-sample {sub_idx} contains non-tensor elements.\n")
-#                                 #print(f"  Sample {idx}, Sub-sample {sub_idx} contains non-tensor elements.")
-#                         else:
-#                             file.write(f"  Sample {idx}, Sub-sample {sub_idx} data is not a tuple of two tensors. Type: {type(data)}, Value: {data}\n")
-#                             #print(f"  Sample {idx}, Sub-sample {sub_idx} data is not a tuple of two tensors. Type: {type(data)}")
-#             else:
-#                 file.write(f"  Sample {idx} is not a valid list of 4 elements. Type: {type(item)}, Length: {len(item)}, Value: {item}\n")
-#                # print(f"Sample {idx} is not a valid list of 4 elements. Type: {type(item)}, Length: {len(item)}")
-
-#         # 在进行任何进一步操作前先保存当前已收集的信息
-#         file.write("=== End of Batch Information ===\n\n")
-#         #print(f"batchlist里面的内容是: {batch_data_list}")
-
-#         for i, item in enumerate(batch_data_list):
-#             file.write(f"sample {i}: Type: {type(item)}, Shape: {item.shape}\n")
-#             #print(f"sample {i}: Type: {type(item)}, Shape: {item.shape}")
-
-#         if batch_data_list:
-#             batch_data = torch.stack(batch_data_list, dim=0)
-
-#             # 记录合并后的 batch 数据
-#             file.write(f"  Combined Batch data shape: {batch_data.shape}\n\n")
-#            # print(f"  Combined Batch data shape: {batch_data.shape}")
-
-#     # 增加批次索引计数器
-#     batch_counter += 1
-
-#     # 返回 dataset_idx 和 batch_data
-#     return dataset_idx, batch_data
-
-
-
-
-
-
-
-
-
 
 def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, num_workers, data_root, dist=False, **kwargs):
     concat_datasets_train = []
@@ -328,6 +174,13 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
             dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
         elif dataname == 'taxibj':
             from .dataloader_taxibj import load_dataset
+            dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
+        elif dataname == 'city':
+            from .dataloader_city import load_dataset
+            dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
+        elif dataname == 'sevir' : #'sevir_vis', 'sevir_ir069', 'sevir_ir107', 'sevir_vil'
+            from .dataloader_sevir import load_dataset
+            cfg_dataloader['data_name'] = kwargs.get('data_name', 'vil')
             dataset_train, dataset_val, dataset_test = load_dataset(batch_size, val_batch_size, data_root, num_workers, **cfg_dataloader)
         else:
             raise ValueError(f'Dataname {dataname} is unsupported')
@@ -367,7 +220,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_train = ConCatDatasetWithIndex(concat_datasets_train)
     sampler_train = ImprovedBatchSchedulerSampler(
         dataset=dataset_train,
-        batch_size=1,
+        batch_size=2,
         shuffle=True
     )
     sampler_train.set_epoch(0)
@@ -406,7 +259,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
 
                     if isinstance(element, torch.Tensor):
                         debug_file.write(f"[DEBUG] Element {element_idx} is a tensor with shape: {element.shape}\n")
-                        debug_file.write(f"[DEBUG] First few values in tensor element {element_idx}: {element.flatten()[:1]}\n")
+                        debug_file.write(f"[DEBUG] First few values in tensor element {element_idx}: {element.flatten()[:16]}\n")
 
                     elif isinstance(element, list):
                         debug_file.write(f"[DEBUG] Element {element_idx} is a list with length: {len(element)}\n")
@@ -444,7 +297,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_val = ConCatDatasetWithIndex(concat_datasets_val)
     sampler_val = ImprovedBatchSchedulerSampler(
         dataset=dataset_val,
-        batch_size=1,
+        batch_size=2,
         shuffle=False
     )
     sampler_val.set_epoch(0)
@@ -467,7 +320,7 @@ def load_concat_data_with_index(datanames, configs, batch_size, val_batch_size, 
     dataset_test = ConCatDatasetWithIndex(concat_datasets_test)
     sampler_test = ImprovedBatchSchedulerSampler(
         dataset=dataset_test,
-        batch_size=1,
+        batch_size=2,
         shuffle=False
     )
     sampler_test.set_epoch(0)

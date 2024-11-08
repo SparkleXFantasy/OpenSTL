@@ -135,6 +135,7 @@ class MultiEarthFormer_Model(nn.Module):
     def __init__(self, enc_dec_configs, **kwargs):
         super(MultiEarthFormer_Model, self).__init__()
         self.enc_dec_configs = enc_dec_configs
+        #self.input_shape = input_shape
         initial_shapes = []
         initial_downsample_scales = []
         input_shape = enc_dec_configs[0]['input_shape']
