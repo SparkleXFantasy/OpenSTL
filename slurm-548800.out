@@ -1,0 +1,21 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/var/spool/slurmd/job548800/slurm_script: line 8: cd: encheng/code/OpenSTL: No such file or directory
+slurmstepd: error: *** JOB 548800 ON paraai-n32-h-01-agent-124 CANCELLED AT 2024-10-30T13:19:23 ***

@@ -1,0 +1,28 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/var/spool/slurmd/job556500/slurm_script: line 9: cd: encheng/simvp_5/OpenSTL: No such file or directory
+Traceback (most recent call last):
+  File "/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/tools/train.py", line 8, in <module>
+    from openstl.api import BaseExperiment
+  File "/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/openstl/api/__init__.py", line 3, in <module>
+    from .exp import BaseExperiment
+  File "/home/bingxing2/ailab/suencheng/encheng/simvp_5/OpenSTL/openstl/api/exp.py", line 6, in <module>
+    from fvcore.nn import FlopCountAnalysis, flop_count_table
+ModuleNotFoundError: No module named 'fvcore'
